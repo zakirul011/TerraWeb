@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!--======== META TAGS ========-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--======== CSS ========-->
+   <link rel="stylesheet" href="./assets/css/animate.min.css">
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./assets/css/magnific-popup.min.css">
+   <link rel="stylesheet" href="./assets/css/slick-min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+
+
+   <script src='./assets/js/lottie.min.js'></script>
+
+
+   <!--======== TITLE ICON ========-->
+   <!-- <link rel="shortcut icon" href="./assets/img/logo/logo.png" type="image/x-icon"> -->
+   <title>TerraWeb</title>
+
+   <script type="importmap">
+      {
+         "imports": {
+            "three": "./assets/js/three.module.js",
+       "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+     }
+      }
+   </script>
+</head>
+
+<body>
+
+   <script type="module" src="./assets/js/globe.js"></script>
+
+
+   <!--======== SCROLL UP// ========-->
+   <div class="scroll-up"><i class="fa-solid fa-angle-up"></i></div>
+   <!--======== SCROLL UP// ========-->
+
+   <!--======== PRELOADER ========-->
+   <div class="preloader">
+      <!-- Loader -->
+      <div class="blobs">
+         <div class="blob-center"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+         <defs>
+            <filter id="goo">
+               <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="goo" />
+               <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+         </defs>
+      </svg>
+   </div>
+   <!--======== PRELOADER // ========-->
+
+   <!--======== HEADER AREA ========-->
+   <header class="header-area">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <h5 class="logo text-white mb-0">
+                  <a href="./index.html">
+                     <i class="lottie-icon" src="./assets/img/galluxy-cycle.json"></i>
+                     Terra <img style="width: .8em; height: .8em;" src="./assets/img/earth.png" alt=""> Web
+                  </a>
+               </h5>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!--======== HEADER AREA// ========-->
+
+   <!--======== MAIN BODY ========-->
+   <main>
+
+      <!--======== HERO AREA ========-->
+      <section class="hero-area overflow-hidden">
+         <div class="parallax-imgs position-absolute z-n1 w-100 h-100 section-overlay d-flex">
+            <div class="bg-attachment" style="background-image: url(./assets/img/bg/5.jpg);"></div>
+            <div class="bg-attachment" style="background-image: url(./assets/img/bg/3.jpg);"></div>
+            <div class="bg-attachment" style="background-image: url(./assets/img/bg/1.jpg);"></div>
+            <div class="bg-attachment" style="background-image: url(./assets/img/bg/2.jpg);"></div>
+            <div class="bg-attachment" style="background-image: url(./assets/img/bg/4.jpg);"></div>
+         </div>
+         <div class="container">
+            <div class="hero-content">
+               <!-- WELCOME TEXT -->
+               <div class="text-center hero-text pt-5">
+                  <h1 class="text-white text-center pt-5 text-uppercase" style="letter-spacing: .1em;">Terra Web</h1>
+                  <button class="btn explore-btn glowing-btn mt-3"><span>Click Here</span></button>
+               </div>
+
+               <!-- GLOBE -->
+               <div class="globe"></div>
+
+               <!-- KEY FEATURES -->
+               <div class="features text-center">
+                  <button class="feature-arrow"><i class="fas fa-angle-left"></i></button>
+                  <div class="row g-4">
+                     <div class="col-md-6">
+                        <div class="feature-item">
+                           <div class="card bg-attachment section-overlay"
+                              style="background-image: url(./assets/img/bg/2.jpg);">
+                              <button class="card-body">
+                                 <h2 class="mb-0">
+                                    Earth's System</h2>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="feature-item">
+                           <div class="card bg-attachment section-overlay"
+                              style="background-image: url(./assets/img/bg/1.jpg);">
+                              <button class="card-body">
+                                 <h2 class="mb-0">
+                                    Interconnection</h2>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="feature-item">
+                           <div class="card bg-attachment section-overlay"
+                              style="background-image: url(./assets/img/bg/5.jpg);">
+                              <button class="card-body">
+                                 <h2 class="mb-0">
+                                    Climate Change</h2>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="feature-item">
+                           <div class="card bg-attachment section-overlay"
+                              style="background-image: url(./assets/img/bg/4.jpg);">
+                              <button class="card-body">
+                                 <h2 class="mb-0">
+                                    Activities</h2>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="feature-item">
+                           <div class="card bg-attachment section-overlay"
+                              style="background-image: url(./assets/img/bg/3.jpg);">
+                              <button class="card-body">
+                                 <h2 class="mb-0">
+                                    NASA's Resources</h2>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- FEATURE TAB -->
+               <div class="feature-tabs">
+
+                  <div class="feature-tab">
+
+                     <!-- SYSTEM -->
+                     <div class="system-list">
+                        <div class="row g-5">
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Atmosphere</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/system/Earth_Atmosphere.jpg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Hydrosphere</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/system/E_hydrosphere.jpg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Cryosphere</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/system/Cryosphere.jpg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Geosphere</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/system/geosphere.jpg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Biosphere</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/system/Hydrosphere.jpg" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="system-tabs">
+                        <div class="system-tab text-white">
+                           <div class="row g-4 align-items-center">
+                              <div class="col-md-6">
+                                 <img class="rounded-4 mb-4" src="./assets/img/system/Atmosphere/Earth_Atmosphere.jpg"
+                                    alt="">
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="text-white fw-normal">The thin layer made up of a mixture of gases and
+                                    particles
+                                    suspended
+                                    in the air that
+                                    surround the Earth (predominantly N2, O2, Ar, CO2 and H2O)</h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="system-tab text-white">
+                           <div class="row g-4 align-items-center">
+                              <div class="col-md-6">
+                                 <img class="rounded-4 mb-4" src="./assets/img/system/Hydrosphere/Wave-857x500.jpg"
+                                    alt="">
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="text-white fw-normal">A sphere that includes the liquid ocean, inland water
+                                    bodies
+                                    and
+                                    groundwater</h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="system-tab text-white">
+                           <div class="row g-4 align-items-center">
+                              <div class="col-md-6">
+                                 <img class="rounded-4 mb-4" src="./assets/img/system/Cryosphere/_dsc1179.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="text-white fw-normal">A subset of the Hydrosphere that consists of frozen
+                                    water
+                                 </h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="system-tab text-white">
+                           <div class="row g-4 align-items-center">
+                              <div class="col-md-6">
+                                 <img class="rounded-4 mb-4" src="./assets/img/system/GeoSphere/geosphere.jpg" alt="">
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="text-white fw-normal">A sphere that includes the solid Earth; the core,
+                                    mantle,
+                                    crust and
+                                    soil layers</h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="system-tab text-white">
+                           <div class="row g-4 align-items-center">
+                              <div class="col-md-6">
+                                 <img class="rounded-4 mb-4"
+                                    src="./assets/img/system/Biosphere/tiger-animal-drinking-water-ai-generated-pictures_1032773-6.jpg"
+                                    alt="">
+                              </div>
+                              <div class="col-md-6">
+                                 <h4 class="text-white fw-normal">A sphere that includes all of Earth’s organisms,
+                                    including
+                                    humans and
+                                    matter that has not yet decomposed</h4>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+                  <div class="feature-tab">
+
+                     <!-- CONNENCTION -->
+                     <div class="connection">
+                        <ul class="connection-bar">
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Atmosphere/Earth_Atmosphere.jpg" alt="">
+                                 <h6>Atmosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Hydrosphere/Wave-857x500.jpg" alt="">
+                                 <h6>Hydrosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Cryosphere/_dsc1179.jpg" alt="">
+                                 <h6>Cryosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/GeoSphere/geosphere.jpg" alt="">
+                                 <h6>Geosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img
+                                    src="./assets/img/system/Biosphere/tiger-running-water-with-sun-shining-its-face_984420-8229.jpg"
+                                    alt="">
+                                 <h6>Biosphere</h6>
+                              </button>
+                           </li>
+                        </ul>
+
+                        <div class="connection-content">
+                           <div class="connection-content-0 text-center active">
+                              <h3 class="text-white">The interconnections between Earth’s systems</h3>
+                              <p>The Earth's systems—geosphere, biosphere, cryosphere, hydrosphere, and atmosphere—are
+                                 deeply interconnected, meaning changes in one system can significantly affect the
+                                 others. Here's how these systems interact with each other:</p>
+
+                              <h2 class="text-white mt-5">CONNECT TWO SIDEBAR</h2>
+                              <h5 class="text-white fw-normal" style="letter-spacing: .3em;">TO EXPLORE INTERCONNECTIONS
+                              </h5>
+                           </div>
+
+
+                           <div class="connection-content-1-2">
+                              <h4 class="text-white mb-5">Atmosphere and Hydrosphere</h4>
+                              <p>Water from the hydrosphere evaporates into the atmosphere, where it forms clouds and
+                                 eventually returns as precipitation. This cycle regulates temperature, weather
+                                 patterns, and climate, affecting all life on Earth.</p>
+                           </div>
+                           <div class="connection-content-1-3">
+                              <h4 class="text-white mb-5">Atmosphere and Cryosphere</h4>
+                              <p>Ice and snow in the cryosphere reflect sunlight, helping to regulate Earth’s
+                                 temperature. When ice melts, it reduces the reflectivity (albedo) of Earth's surface,
+                                 leading to increased absorption of solar energy and further warming—a feedback loop
+                                 that affects global climate</p>
+
+                              <p>Temperature changes in the atmosphere can cause melting or formation of ice in the
+                                 cryosphere. Atmospheric greenhouse gases can trap heat, leading to glacial melting and
+                                 rising sea levels</p>
+
+                              <h5 class="text-white">Atmosphere and Cryosphere (Ice and Snow)</h5>
+
+                              <p><b>Change in the Atmosphere:</b> Increased greenhouse gas emissions from human
+                                 activities (e.g., burning fossil fuels) lead to global warming.</p>
+                              <p><b>Impact on the Cryosphere:</b> Warming temperatures cause polar ice caps, glaciers,
+                                 and sea ice to melt at an accelerated rate.</p>
+                              <h6 class="text-white"><b>Impact on Other Systems:</b></h6>
+                              <p> <b>Hydrosphere: </b>Melting ice contributes to rising sea levels, which can lead to
+                                 coastal erosion and flooding.</p>
+                              <p> <b>Geosphere:</b> Thawing permafrost (frozen ground) can destabilize land, leading to
+                                 landslides and altered landscapes.</p>
+                              <p> <b>Biosphere:</b> Loss of ice habitat affects species adapted to cold environments,
+                                 such as polar bears and penguins</p>
+
+                           </div>
+                           <div class="connection-content-1-4">
+                              <h4 class="text-white mb-5">Atmosphere and Geosphere</h4>
+                              <p>Volcanic eruptions from the geosphere release gases and ash into the atmosphere, which
+                                 can influence climate by blocking sunlight and altering temperatures. Over time,
+                                 weathering of rocks in the geosphere also absorbs atmospheric carbon dioxide, impacting
+                                 the carbon cycle</p>
+                              <p>Weather patterns in the atmosphere influence erosion and sediment transport in the
+                                 geosphere. Wind and precipitation shape the landscape over time, while atmospheric
+                                 conditions also affect soil formation and nutrient cycles.</p>
+                              <h5 class="text-white">Volcanic Eruptions (Geosphere) and Atmospheric Composition
+                                 (Atmosphere)</h5>
+                              <p><b>Change in the Geosphere:</b> Volcanic eruptions release ash, sulfur dioxide (SO2),
+                                 and other gases into the atmosphere.</p>
+                              <h6 class="text-white">Change in the Geosphere:</h6>
+                              <p><b>Climate:</b> Short-term cooling can disrupt weather patterns and reduce global
+                                 temperatures.</p>
+                              <p><b>Biosphere:</b> Changes in temperature and sunlight can affect plant growth and
+                                 animal behavior.</p>
+                           </div>
+                           <div class="connection-content-1-5">
+                              <h4 class="text-white">Atmosphere and Biosphere</h4>
+                              <p>Plants in the biosphere absorb carbon dioxide from the atmosphere and release oxygen
+                                 through photosynthesis, playing a crucial role in maintaining atmospheric balance.
+                                 Animals, in turn, breathe in oxygen and release carbon dioxide, creating a symbiotic
+                                 relationship.</p>
+                              <h5 class="text-white">Deforestation (Biosphere) and Carbon Cycle (Atmosphere)</h5>
+                              <p><b>Change in the Biosphere:</b> Large-scale deforestation reduces the number of trees
+                                 and plants.</p>
+                              <p><b>Impact on the Atmosphere:</b> Trees absorb carbon dioxide (CO2) during
+                                 photosynthesis. Fewer trees mean less CO2 is removed from the atmosphere, leading to
+                                 increased greenhouse gases.</p>
+                              <h6 class="text-white">Impact on Other Systems:</h6>
+                              <p><b>Hydrosphere:</b> Changes in vegetation can affect the water cycle by altering local
+                                 precipitation patterns and increasing runoff.</p>
+                              <P><b>Geosphere:</b> Erosion rates may increase due to the loss of plant roots that
+                                 stabilize soil.</P>
+                           </div>
+
+                           <div class="connection-content-2-1">
+                              <h4 class="text-white mb-5">Hydrosphere and Atmosphere</h4>
+                              <p>Water from the hydrosphere evaporates into the atmosphere, where it forms clouds and
+                                 eventually returns as precipitation. This cycle regulates temperature, weather
+                                 patterns, and climate, affecting all life on Earth.</p>
+                           </div>
+                           <div class="connection-content-2-3">
+                              <h4 class="text-white mb-5">Hydrosphere and Cryosphere</h4>
+                              <p>The cryosphere, which includes ice caps and glaciers, influences sea levels and the
+                                 availability of freshwater. Melting ice from the cryosphere flows into the hydrosphere,
+                                 impacting ocean currents and ecosystems.</p>
+                              <h5 class="text-white">Melting Glaciers (Cryosphere) and Ocean Circulation (Hydrosphere)
+                              </h5>
+                              <p><b>Change in the Cryosphere:</b> Glaciers and ice sheets are melting, adding large
+                                 amounts of freshwater to the oceans.</p>
+                              <p><b>Impact on the Hydrosphere:</b> Freshwater influx can alter ocean salinity and
+                                 density, impacting ocean circulation patterns.</p>
+                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
+                              <p><b>Climate:</b> Changes in ocean circulation can influence global climate patterns,
+                                 such as
+                                 the Gulf Stream's impact on European climate.</p>
+                              <p><b>Biosphere:</b> Altered ocean currents can affect marine ecosystems and species
+                                 distributions.</p>
+                           </div>
+                           <div class="connection-content-2-4">
+                              <h4 class="text-white mb-5">Hydrosphere and Geosphere </h4>
+                              <p>The geosphere interacts with the hydrosphere through processes like erosion, which
+                                 transports minerals and nutrients into bodies of water, and tectonic activity, which
+                                 can create new waterways or alter existing ones.</p>
+                              <h5 class="text-white">Erosion (Geosphere) and Water Quality (Hydrosphere)</h5>
+                              <p><b>Change in the Geosphere:</b> Erosion from activities like mining, construction, or
+                                 deforestation can lead to the loss of soil and rock.</p>
+                              <p><b>Impact on the Hydrosphere:</b> Eroded material (sediment) can be washed into rivers
+                                 and lakes, impacting water quality.</p>
+                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
+                              <p><b>Biosphere:</b> Increased sedimentation can smother aquatic habitats, affecting fish
+                                 and other organisms.</p>
+                              <p><b>Atmosphere:</b> Dust from erosion can become airborne, affecting air quality and
+                                 potentially influencing climate patterns.</p>
+                           </div>
+                           <div class="connection-content-2-5">
+                              <h4 class="text-white mb-5">Hydrosphere and Biosphere</h4>
+                              <p>The hydrosphere provides water necessary for all living organisms. Aquatic ecosystems,
+                                 such as oceans, rivers, and lakes, support a vast range of biodiversity, and changes in
+                                 water quality or availability can drastically affect life.</p>
+                              <h5 class="text-white">Wetland Drainage (Hydrosphere) and Biodiversity (Biosphere)</h5>
+                              <p><b>Change in the Hydrosphere:</b> Draining wetlands for agriculture or development
+                                 removes standing water and alters wetland ecosystems.</p>
+                              <p><b>Impact on the Biosphere:</b> Wetlands provide critical habitat for a variety of
+                                 species. Their loss can lead to declines in biodiversity.</p>
+                              <h6 class="text-white">Impact on Other Systems:</h6>
+                              <p><b>Geosphere:</b> Wetland drainage can increase soil erosion and sedimentation in
+                                 nearby water bodies.</p>
+                              <p><b>Atmosphere:</b> Wetlands act as carbon sinks; their loss can lead to increased
+                                 atmospheric CO2 levels.</p>
+                           </div>
+
+                           <div class="connection-content-3-1">
+                              <h4 class="text-white mb-5">Cryosphere and Atmosphere</h4>
+                              <p>Ice and snow in the cryosphere reflect sunlight, helping to regulate Earth’s
+                                 temperature. When ice melts, it reduces the reflectivity (albedo) of Earth's surface,
+                                 leading to increased absorption of solar energy and further warming—a feedback loop
+                                 that affects global climate</p>
+
+                              <p>Temperature changes in the atmosphere can cause melting or formation of ice in the
+                                 cryosphere. Atmospheric greenhouse gases can trap heat, leading to glacial melting and
+                                 rising sea levels</p>
+
+                              <h5 class="text-white">Atmosphere and Cryosphere (Ice and Snow)</h5>
+
+                              <p><b>Change in the Atmosphere:</b> Increased greenhouse gas emissions from human
+                                 activities (e.g., burning fossil fuels) lead to global warming.</p>
+                              <p><b>Impact on the Cryosphere:</b> Warming temperatures cause polar ice caps, glaciers,
+                                 and sea ice to melt at an accelerated rate.</p>
+                              <h6 class="text-white"><b>Impact on Other Systems:</b></h6>
+                              <p> <b>Hydrosphere: </b>Melting ice contributes to rising sea levels, which can lead to
+                                 coastal erosion and flooding.</p>
+                              <p> <b>Geosphere:</b> Thawing permafrost (frozen ground) can destabilize land, leading to
+                                 landslides and altered landscapes.</p>
+                              <p> <b>Biosphere:</b> Loss of ice habitat affects species adapted to cold environments,
+                                 such as polar bears and penguins</p>
+                           </div>
+                           <div class="connection-content-3-2">
+
+                              <h4 class="text-white mb-5">Cryosphere and Hydrosphere</h4>
+                              <p>The cryosphere, which includes ice caps and glaciers, influences sea levels and the
+                                 availability of freshwater. Melting ice from the cryosphere flows into the hydrosphere,
+                                 impacting ocean currents and ecosystems.</p>
+                              <h5 class="text-white">Melting Glaciers (Cryosphere) and Ocean Circulation (Hydrosphere)
+                              </h5>
+                              <p><b>Change in the Cryosphere:</b> Glaciers and ice sheets are melting, adding large
+                                 amounts of freshwater to the oceans.</p>
+                              <p><b>Impact on the Hydrosphere:</b> Freshwater influx can alter ocean salinity and
+                                 density, impacting ocean circulation patterns.</p>
+                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
+                              <p><b>Climate:</b> Changes in ocean circulation can influence global climate patterns,
+                                 such as
+                                 the Gulf Stream's impact on European climate.</p>
+                              <p><b>Biosphere:</b> Altered ocean currents can affect marine ecosystems and species
+                                 distributions.</p>
+                           </div>
+                           <div class="connection-content-3-4">
+                              <h4 class="text-white mb-4">Cryosphere and Geosphere </h4>
+                           </div>
+                           <div class="connection-content-3-5">
+                              <h4 class="text-white mb-4">Cryosphere and Biosphere </h4>
+                           </div>
+
+                           <div class="connection-content-4-1">
+                              <h4 class="text-white mb-5">Geosphere and Atmosphere</h4>
+                              <p>Volcanic eruptions from the geosphere release gases and ash into the atmosphere, which
+                                 can influence climate by blocking sunlight and altering temperatures. Over time,
+                                 weathering of rocks in the geosphere also absorbs atmospheric carbon dioxide, impacting
+                                 the carbon cycle</p>
+                              <p>Weather patterns in the atmosphere influence erosion and sediment transport in the
+                                 geosphere. Wind and precipitation shape the landscape over time, while atmospheric
+                                 conditions also affect soil formation and nutrient cycles.</p>
+                              <h5 class="text-white">Volcanic Eruptions (Geosphere) and Atmospheric Composition
+                                 (Atmosphere)</h5>
+                              <p><b>Change in the Geosphere:</b> Volcanic eruptions release ash, sulfur dioxide (SO2),
+                                 and other gases into the atmosphere.</p>
+                              <h6 class="text-white">Change in the Geosphere:</h6>
+                              <p><b>Climate:</b> Short-term cooling can disrupt weather patterns and reduce global
+                                 temperatures.</p>
+                              <p><b>Biosphere:</b> Changes in temperature and sunlight can affect plant growth and
+                                 animal behavior.</p>
+                           </div>
+                           <div class="connection-content-4-2">
+                              <h4 class="text-white mb-5">Geosphere and Hydrosphere</h4>
+                              <p>The geosphere interacts with the hydrosphere through processes like erosion, which
+                                 transports minerals and nutrients into bodies of water, and tectonic activity, which
+                                 can create new waterways or alter existing ones.</p>
+                              <h5 class="text-white">Erosion (Geosphere) and Water Quality (Hydrosphere)</h5>
+                              <p><b>Change in the Geosphere:</b> Erosion from activities like mining, construction, or
+                                 deforestation can lead to the loss of soil and rock.</p>
+                              <p><b>Impact on the Hydrosphere:</b> Eroded material (sediment) can be washed into rivers
+                                 and lakes, impacting water quality.</p>
+                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
+                              <p><b>Biosphere:</b> Increased sedimentation can smother aquatic habitats, affecting fish
+                                 and other organisms.</p>
+                              <p><b>Atmosphere:</b> Dust from erosion can become airborne, affecting air quality and
+                                 potentially influencing climate patterns.</p>
+                           </div>
+                           <div class="connection-content-4-3">
+                              <h4 class="text-white mb-4">Geosphere and Cryosphere</h4>
+                           </div>
+                           <div class="connection-content-4-5">
+                              <h4 class="text-white mb-4">Geosphere and Biosphere</h4>
+                              <p>The geosphere provides the foundation for the biosphere by offering land for plants to
+                                 grow and habitats for animals. Soil formation in the geosphere affects plant life,
+                                 which in turn influences the types of organisms that can thrive in a given area</p>
+                           </div>
+
+                           <div class="connection-content-5-1">
+                              <h4 class="text-white">Biosphere and Atmosphere</h4>
+                              <p>Plants in the biosphere absorb carbon dioxide from the atmosphere and release oxygen
+                                 through photosynthesis, playing a crucial role in maintaining atmospheric balance.
+                                 Animals, in turn, breathe in oxygen and release carbon dioxide, creating a symbiotic
+                                 relationship.</p>
+                              <h5 class="text-white">Deforestation (Biosphere) and Carbon Cycle (Atmosphere)</h5>
+                              <p><b>Change in the Biosphere:</b> Large-scale deforestation reduces the number of trees
+                                 and plants.</p>
+                              <p><b>Impact on the Atmosphere:</b> Trees absorb carbon dioxide (CO2) during
+                                 photosynthesis. Fewer trees mean less CO2 is removed from the atmosphere, leading to
+                                 increased greenhouse gases.</p>
+                              <h6 class="text-white">Impact on Other Systems:</h6>
+                              <p><b>Hydrosphere:</b> Changes in vegetation can affect the water cycle by altering local
+                                 precipitation patterns and increasing runoff.</p>
+                              <P><b>Geosphere:</b> Erosion rates may increase due to the loss of plant roots that
+                                 stabilize soil.</P>
+                           </div>
+                           <div class="connection-content-5-2">
+                              <h4 class="text-white mb-5">Biosphere and Hydrosphere</h4>
+                              <p>The hydrosphere provides water necessary for all living organisms. Aquatic ecosystems,
+                                 such as oceans, rivers, and lakes, support a vast range of biodiversity, and changes in
+                                 water quality or availability can drastically affect life.</p>
+                              <h5 class="text-white">Wetland Drainage (Hydrosphere) and Biodiversity (Biosphere)</h5>
+                              <p><b>Change in the Hydrosphere:</b> Draining wetlands for agriculture or development
+                                 removes standing water and alters wetland ecosystems.</p>
+                              <p><b>Impact on the Biosphere:</b> Wetlands provide critical habitat for a variety of
+                                 species. Their loss can lead to declines in biodiversity.</p>
+                              <h6 class="text-white">Impact on Other Systems:</h6>
+                              <p><b>Geosphere:</b> Wetland drainage can increase soil erosion and sedimentation in
+                                 nearby water bodies.</p>
+                              <p><b>Atmosphere:</b> Wetlands act as carbon sinks; their loss can lead to increased
+                                 atmospheric CO2 levels.</p>
+                           </div>
+                           <div class="connection-content-5-3">
+                              <h4 class="text-white mb-4">Biosphere and Cryosphere </h4>
+                           </div>
+                           <div class="connection-content-5-4">
+                              <h4 class="text-white mb-4">Biosphere and Geosphere</h4>
+                              <p>The geosphere provides the foundation for the biosphere by offering land for plants to
+                                 grow and habitats for animals. Soil formation in the geosphere affects plant life,
+                                 which in turn influences the types of organisms that can thrive in a given area</p>
+                           </div>
+
+                        </div>
+
+                        <ul class="connection-bar">
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Atmosphere/Earth_Atmosphere.jpg" alt="">
+                                 <h6>Atmosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Hydrosphere/Wave-857x500.jpg" alt="">
+                                 <h6>Hydrosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/Cryosphere/_dsc1179.jpg" alt="">
+                                 <h6>Cryosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img src="./assets/img/system/GeoSphere/geosphere.jpg" alt="">
+                                 <h6>Geosphere</h6>
+                              </button>
+                           </li>
+                           <li>
+                              <button>
+                                 <img
+                                    src="./assets/img/system/Biosphere/tiger-running-water-with-sun-shining-its-face_984420-8229.jpg"
+                                    alt="">
+                                 <h6>Biosphere</h6>
+                              </button>
+                           </li>
+                        </ul>
+                     </div>
+
+                  </div>
+
+                  <div class="feature-tab">
+                     <!-- CLIMATE CHANGE -->
+                     <div class="climate-change text-white">
+                        <div class="row g-4">
+
+                           <div class="col-md-3">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/1.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">Climate</a></h4>
+                                    <p>Droughts, floods will become more frequent and
+                                       severe as our planet warms and climate changes.</p>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-3">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/2.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What is drought? </a></h4>
+                                    <p>Learn more about drought, what causes it, and how we can support those most
+                                       impacted</p>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-3">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/3.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What Causes Floods?</a></h4>
+                                    <p>They are mostly caused by rivers, but floods can also occur from flooding lakes
+                                       and seas</p>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-3">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/4.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What causes cyclones?</a></h4>
+                                    <p>A cyclone forms in an area of low pressure. This area of low pressure draws in
+                                       surrounding winds.</p>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="feature-tab">
+                     <!-- ACTIVITIES -->
+                     <div class="activities">
+                        <div class="row g-5 justify-content-center">
+                           <div class="col-md-6">
+
+                              <div class="card bg-attachment section-overlay"
+                                 style="background-image: url(./assets/img/bg/quiz.jpg);">
+                                 <button class="card-body">
+                                    <h2 class="mb-0">
+                                       Quiz</h2>
+                                 </button>
+                              </div>
+
+                           </div>
+                           <div class="col-md-6">
+
+                              <div class="card bg-attachment section-overlay"
+                                 style="background-image: url(./assets/img/bg/game.png);">
+                                 <button class="card-body">
+                                    <h2 class="mb-0">
+                                       Game</h2>
+                                 </button>
+                              </div>
+
+                           </div>
+                           <div class="col-md-6">
+
+                              <div class="card bg-attachment section-overlay"
+                                 style="background-image: url(./assets/img/bg/faq.jpg)">
+                                 <button class="card-body">
+                                    <h2 class="mb-0">
+                                       FAQ</h2>
+                                 </button>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="feature-tab">
+                     <div class="nasa">
+
+                        <div class="nasa-slider">
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/5.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">Climate</a></h4>
+                                    <p>Droughts, floods will become more frequent and
+                                       severe as our planet warms and climate changes.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/4.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What is drought? </a></h4>
+                                    <p>Learn more about drought, what causes it, and how we can support those most
+                                       impacted</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/3.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What Causes Floods?</a></h4>
+                                    <p>They are mostly caused by rivers, but floods can also occur from flooding lakes
+                                       and seas</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/2.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What causes cyclones?</a></h4>
+                                    <p>A cyclone forms in an area of low pressure. This area of low pressure draws in
+                                       surrounding winds.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/5.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">Climate</a></h4>
+                                    <p>Droughts, floods will become more frequent and
+                                       severe as our planet warms and climate changes.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/4.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What is drought? </a></h4>
+                                    <p>Learn more about drought, what causes it, and how we can support those most
+                                       impacted</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/3.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What Causes Floods?</a></h4>
+                                    <p>They are mostly caused by rivers, but floods can also occur from flooding lakes
+                                       and seas</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/bg/2.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a href="#">What causes cyclones?</a></h4>
+                                    <p>A cyclone forms in an area of low pressure. This area of low pressure draws in
+                                       surrounding winds.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--======== HERO AREA// ========-->
+
+
+
+
+
+   </main>
+   <!--======== MAIN BODY// ========-->
+
+   <!--======== FOOTER AREA ========-->
+   <footer class="footer-area">
+      <div class="container">
+
+      </div>
+   </footer>
+   <!--======== FOOTER AREA// ========-->
+
+   <!--======== ESSENTIAL JS, PLUGIN JS ========-->
+   <script src="./assets/js/jquery-3.7.1.min.js"></script>
+   <script src="./assets/js/magnific-popup.min.js"></script>
+   <script src="./assets/js/one-page-nav.min.js"></script>
+   <script src="./assets/js/skrollr.min.js"></script>
+   <script src="./assets/js/slick.min.js"></script>
+   <script src="./assets/js/gsap.min.js"></script>
+   <script src="./assets/js/ScrollTrigger.min.js"></script>
+
+   <!--======== CUSTOM JS ========-->
+   <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
