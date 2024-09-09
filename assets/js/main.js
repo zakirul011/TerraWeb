@@ -3,8 +3,11 @@ const hero = document.querySelector(".hero-content");
 const features = hero.querySelectorAll(".feature-item");
 const expBtn = hero.querySelector(".explore-btn");
 const featureArrow = hero.querySelector(".feature-arrow");
+const activitiesArrow = hero.querySelector(".activities-arrow");
 const systemItem = hero.querySelectorAll(".system-list-item");
+const activitiesItem = hero.querySelectorAll(".activities-item");
 const systemTabs = hero.querySelectorAll(".system-tab");
+const activitiesTabs = hero.querySelectorAll(".activities-tab");
 const featureTabs = hero.querySelectorAll(".feature-tab");
 const connectionWrap = hero.querySelectorAll(".connection");
 
@@ -18,13 +21,20 @@ featureArrow.addEventListener("click", () => {
   hero.classList.remove("animation-connection");
   hero.classList.remove("animation-climate");
   hero.classList.remove("animation-activities");
+  hero.classList.remove("animation-act-expand");
   hero.classList.remove("animation-nasa");
   for (let i = 0; i < systemItem.length; i++) {
     systemItem[i].classList.remove("active");
   }
+  for (let i = 0; i < activitiesItem.length; i++) {
+    activitiesItem[i].classList.remove("active");
+  }
   for (let i = 0; i < featureTabs.length; i++) {
     featureTabs[i].classList.remove("active");
   }
+});
+activitiesArrow.addEventListener("click", () => {
+  hero.classList.remove("animation-act-expand");
 });
 
 // FEATURE EXPAND
@@ -67,6 +77,21 @@ systemItem.forEach((item, index) => {
     systemTabs[index].classList.add("active");
     item.classList.add("active");
     hero.classList.add("animation-system");
+  });
+});
+
+// ACTIVITIES EXPAND
+activitiesItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    for (let i = 0; i < activitiesItem.length; i++) {
+      activitiesItem[i].classList.remove("active");
+    }
+    for (let i = 0; i < activitiesTabs.length; i++) {
+      activitiesTabs[i].classList.remove("active");
+    }
+    activitiesTabs[index].classList.add("active");
+    item.classList.add("active");
+    hero.classList.add("animation-act-expand");
   });
 });
 
@@ -145,6 +170,28 @@ connectionWrap.forEach((wrap) => {
   }
 });
 
+// FAQ AREA
+const faqWrap = document.querySelectorAll(".faq-box-wrap");
+faqWrap.forEach((wrap) => {
+  let faqBox = wrap.querySelectorAll(".faq-box");
+  faqBox.forEach((bx) => {
+    let title = bx.querySelector(".faq-box-title");
+    let body = bx.querySelector(".faq-box-body");
+    if (bx.classList.contains("active")) {
+      body.style.maxHeight = body.scrollHeight + "px";
+    }
+    title.addEventListener("click", () => {
+      if (bx.classList.contains("active")) {
+        bx.classList.remove("active");
+        body.style.maxHeight = null;
+      } else {
+        bx.classList.add("active");
+        body.style.maxHeight = body.scrollHeight + "px";
+      }
+    });
+  });
+});
+
 //========== PRELOADER ==========>
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
@@ -155,7 +202,6 @@ window.addEventListener("load", () => {
 const headerArea = document.querySelectorAll(".header-area");
 headerArea.forEach((area) => {
   let height;
-  let scrollUp = document.querySelector(".scroll-up");
   window.addEventListener("resize", () => {
     addHeaderHeight();
   });
@@ -169,10 +215,8 @@ headerArea.forEach((area) => {
   window.addEventListener("scroll", () => {
     if (window.scrollY > height) {
       area.classList.add("sticky");
-      scrollUp.classList.add("sticky");
     } else {
       area.classList.remove("sticky");
-      scrollUp.classList.remove("sticky");
     }
   });
   scrollUp.addEventListener("click", () => {
@@ -351,56 +395,6 @@ lottieIcon.forEach((icon) => {
   });
   //========== SKROLLR JS// ==========>
 
-  //========== HERO AREA SLIDER ==========>
-  function heroSlider() {
-    var BasicSlider = $(".hero-slider");
-    BasicSlider.on("init", function (e, slick) {
-      var $firstAnimatingElements = $(".hero-slide:first-child").find(
-        "[data-animation]"
-      );
-      doAnimations($firstAnimatingElements);
-    });
-    BasicSlider.on(
-      "beforeChange",
-      function (e, slick, currentSlide, nextSlide) {
-        var $animatingElements = $(
-          '.hero-slide[data-slick-index="' + nextSlide + '"]'
-        ).find("[data-animation]");
-        doAnimations($animatingElements);
-      }
-    );
-    BasicSlider.slick({
-      autoplay: false,
-      autoplaySpeed: 10000,
-      dots: false,
-      fade: true,
-      arrows: true,
-      appendArrows: ".hero-slider-wrap .slider-nav",
-      prevArrow:
-        '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
-      nextArrow:
-        '<button type="button" class="slick-next"><i class="fal fa-angle-right"></i></button>',
-    });
-    function doAnimations(elements) {
-      var animationEndEvents =
-        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-      elements.each(function () {
-        var $this = $(this);
-        var $animationDelay = $this.data("delay");
-        var $animationType = "animated " + $this.data("animation");
-        $this.css({
-          "animation-delay": $animationDelay,
-          "-webkit-animation-delay": $animationDelay,
-        });
-        $this.addClass($animationType).one(animationEndEvents, function () {
-          $this.removeClass($animationType);
-        });
-      });
-    }
-  }
-  heroSlider();
-  //========== HERO AREA SLIDER// ==========>
-
   //========== NASA SLIDER ==========>
   $(".nasa-slider").slick({
     slidesToShow: 4,
@@ -408,6 +402,7 @@ lottieIcon.forEach((icon) => {
     dots: true,
     arrows: false,
     swipeToSlide: true,
+    autoplay: true,
     prevArrow:
       '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
     nextArrow:
