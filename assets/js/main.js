@@ -2,6 +2,8 @@
 const hero = document.querySelector(".hero-content");
 const features = hero.querySelectorAll(".feature-item");
 const expBtn = hero.querySelector(".explore-btn");
+const climateBtn = hero.querySelector(".climate-btn");
+const climateWrap = hero.querySelector(".climate-change");
 const featureArrow = hero.querySelector(".feature-arrow");
 const activitiesArrow = hero.querySelector(".activities-arrow");
 const systemItem = hero.querySelectorAll(".system-list-item");
@@ -14,15 +16,20 @@ const connectionWrap = hero.querySelectorAll(".connection");
 expBtn.addEventListener("click", () => {
   hero.classList.add("animation-1");
 });
+climateBtn.addEventListener("click", () => {
+  climateWrap.classList.add("active");
+});
 featureArrow.addEventListener("click", () => {
   hero.classList.remove("animation-2");
   hero.classList.remove("animation-3");
+  hero.classList.remove("animation-earth");
   hero.classList.remove("animation-system");
   hero.classList.remove("animation-connection");
   hero.classList.remove("animation-climate");
   hero.classList.remove("animation-activities");
   hero.classList.remove("animation-act-expand");
   hero.classList.remove("animation-nasa");
+  climateWrap.classList.remove("active");
   for (let i = 0; i < systemItem.length; i++) {
     systemItem[i].classList.remove("active");
   }
@@ -51,6 +58,7 @@ features.forEach((feature, index) => {
     feature.classList.add("active");
     if (index == 0) {
       hero.classList.add("animation-2");
+      hero.classList.add("animation-earth");
     } else if (index == 1) {
       hero.classList.add("animation-2");
       hero.classList.add("animation-connection");
@@ -103,7 +111,7 @@ connectionWrap.forEach((wrap) => {
   let leftPannel = pannel[0].querySelectorAll("li");
   let rightPannel = pannel[1].querySelectorAll("li");
 
-  let l, r;
+  let l, r, videos, selectedContent;
 
   leftPannel.forEach((btn, index) => {
     btn.addEventListener("click", () => {
@@ -126,9 +134,13 @@ connectionWrap.forEach((wrap) => {
       }
 
       if (wrap.querySelector(`.connection-content-${l}-${r}`)) {
-        wrap
-          .querySelector(`.connection-content-${l}-${r}`)
-          .classList.add("active");
+        selectedContent = wrap.querySelector(`.connection-content-${l}-${r}`);
+        videos = selectedContent.querySelectorAll("video");
+        videos.forEach((video) => {
+          video.currentTime = 0;
+        });
+
+        selectedContent.classList.add("active");
       } else {
         console.log(`.connection-content-${l}-${r}`);
       }
@@ -156,9 +168,12 @@ connectionWrap.forEach((wrap) => {
         }
       }
       if (wrap.querySelector(`.connection-content-${l}-${r}`)) {
-        wrap
-          .querySelector(`.connection-content-${l}-${r}`)
-          .classList.add("active");
+        selectedContent = wrap.querySelector(`.connection-content-${l}-${r}`);
+        videos = selectedContent.querySelectorAll("video");
+        videos.forEach((video) => {
+          video.play();
+        });
+        selectedContent.classList.add("active");
       } else {
         console.log(`.connection-content-${l}-${r}`);
       }
@@ -397,16 +412,19 @@ lottieIcon.forEach((icon) => {
 
   //========== CLIMATE SLIDER ==========>
   $(".climate-slider").slick({
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     dots: true,
-    arrows: false,
+    arrows: true,
     swipeToSlide: true,
-    autoplay: true,
+    vertical: true,
+    verticalSwiping: true,
+    appendDots: ".climate-slider-control",
+    appendArrows: ".climate-slider-control",
     prevArrow:
-      '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
+      '<button type="button" class="slick-prev"><i class="fal fa-angle-up"></i></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><i class="fal fa-angle-right"></i></button>',
+      '<button type="button" class="slick-next"><i class="fal fa-angle-down"></i></button>',
 
     responsive: [
       {
