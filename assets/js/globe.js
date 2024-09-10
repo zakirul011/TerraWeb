@@ -30,6 +30,7 @@ const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./assets/textures/Earth.webp"),
+  // map: loader.load("./assets/textures/Earth.jpg"),
   specularMap: loader.load("./assets/textures/02_earthspec1k.jpg"),
   bumpMap: loader.load("./assets/textures/01_earthbump2k.jpg"),
   bumpScale: 0.04,
@@ -88,3 +89,15 @@ function handleWindowResize() {
   renderer.setSize(w, h);
 }
 window.addEventListener("resize", handleWindowResize, false);
+
+// Add this function to change the texture on button click
+// function changeTexture(newTexturePath) {
+//   const newTexture = loader.load(newTexturePath);
+//   earthMesh.material.map = newTexture;
+//   earthMesh.material.needsUpdate = true;
+// }
+
+// const button = document.querySelector(".feature-climate");
+// button.addEventListener("click", () => {
+//   changeTexture("./assets/textures/climate.png");
+// });

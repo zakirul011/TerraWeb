@@ -45,6 +45,7 @@ body {
 p {
   line-height: 1.667;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 h1,
 h2,
@@ -59,7 +60,7 @@ h6 {
   line-height: 1.4;
 }
 h1 {
-  font-size: 100px;
+  font-size: 120px;
 }
 h2 {
   font-size: 42px;
@@ -620,8 +621,16 @@ body.loaded .preloader {
   width: 100%;
   z-index: 999;
   transition: 0.3s ease;
+  padding: 1em 0;
 }
-
+.header-area.sticky {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 0.8em 0;
+}
+.logo img {
+  width: 2em;
+}
 /* NAV */
 .mainmenu li {
   display: inline-block;
@@ -845,9 +854,16 @@ div:nth-child(4) > .system-list-item {
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
-  display: none;
   animation: fadeEffect 0.5s ease;
   width: 130%;
+}
+.system-tab {
+  opacity: 0;
+  pointer-events: none;
+}
+.system-tab.active {
+  opacity: 1;
+  pointer-events: all;
 }
 .system-tab img {
   width: 100%;
@@ -857,14 +873,12 @@ div:nth-child(4) > .system-list-item {
   pointer-events: none;
 }
 .activities-tab,
-.connection-content > div,
-.system-tab {
+.connection-content > div {
   display: none;
   animation: fadeEffect 0.5s ease;
 }
 .activities-tab.active,
-.connection-content > div.active,
-.system-tab.active {
+.connection-content > div.active {
   display: block;
 }
 .connection-content > div.connection-content-0.active,
@@ -873,6 +887,11 @@ div:nth-child(4) > .system-list-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.system-tab .slick-track {
+  display: flex;
+  align-items: center;
 }
 
 @keyframes fadeEffect {
@@ -976,7 +995,12 @@ div:nth-child(4) > .system-list-item {
   opacity: 0.2;
   pointer-events: none;
 }
-
+.connection-content-0 > img {
+  width: 20em;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* animation 1 */
 .hero-content.animation-1 .globe {
   transform: translate(0, -50%) scale(0.5);
@@ -1107,10 +1131,6 @@ div:nth-child(4) > .system-list-item {
 }
 
 /* ACTIVITIES */
-.activities .card {
-  --bs-card-spacer-y: 7em;
-}
-
 .faq-box-body {
   transition: 0.3s ease;
   max-height: 0;
@@ -1153,13 +1173,13 @@ div:nth-child(4) > .system-list-item {
   text-align: left;
   padding: 20px;
   font-weight: inherit;
-  background: none;
   border: 0;
   position: relative;
   padding-right: 45px;
-  background: #fff;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.5));
   border-radius: 10px 10px;
   color: #000;
+  backdrop-filter: blur(10px);
 }
 .faq-box.active .faq-box-title button {
   border-radius: 10px 10px 0 0;
@@ -1175,7 +1195,7 @@ div:nth-child(4) > .system-list-item {
 .activities-tab {
   width: 100%;
   transform: translate(110%);
-  top: 10%;
+  top: 0%;
 }
 .activities-tabs {
   opacity: 0;
@@ -1268,16 +1288,16 @@ div:nth-child(4) > .system-list-item {
   padding-bottom: 7em;
 }
 .team-img img {
-  height: 15em;
-  width: 15em;
+  height: 12em;
+  width: 12em;
   border-radius: 50%;
   object-fit: cover;
-  border: 10px solid #fff;
+  border: 7px solid #fff;
 }
 .team-card {
   text-align: center;
   border-radius: 1em;
-  padding: 2em 1em;
+  padding: 3em 1em;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
   position: relative;

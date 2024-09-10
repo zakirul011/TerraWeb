@@ -185,6 +185,10 @@ faqWrap.forEach((wrap) => {
         bx.classList.remove("active");
         body.style.maxHeight = null;
       } else {
+        for (let i = 0; i < faqBox.length; i++) {
+          faqBox[i].classList.remove("active");
+          faqBox[i].querySelector(".faq-box-body").style.maxHeight = null;
+        }
         bx.classList.add("active");
         body.style.maxHeight = body.scrollHeight + "px";
       }
@@ -218,10 +222,6 @@ headerArea.forEach((area) => {
     } else {
       area.classList.remove("sticky");
     }
-  });
-  scrollUp.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
   });
 });
 //========== STICKY HEADER, BACK TO TOP// ==========>
@@ -395,8 +395,8 @@ lottieIcon.forEach((icon) => {
   });
   //========== SKROLLR JS// ==========>
 
-  //========== NASA SLIDER ==========>
-  $(".nasa-slider").slick({
+  //========== CLIMATE SLIDER ==========>
+  $(".climate-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: true,
@@ -435,5 +435,16 @@ lottieIcon.forEach((icon) => {
       },
     ],
   });
-  //========== PRODUCT SLIDER// ==========>
+  //========== CLIMATE SLIDER// ==========>
+
+  //========== img SLIDER ==========>
+  $(".img-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    fade: true,
+  });
+  //========== img SLIDER// ==========>
 })(jQuery);
