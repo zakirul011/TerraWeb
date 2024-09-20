@@ -437,7 +437,7 @@ lottieIcon.forEach((icon) => {
       var direction =
         Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
 
-      console.log("wheel scroll ", e.deltaX, e.deltaY, direction);
+      // console.log("wheel scroll ", e.deltaX, e.deltaY, direction);
 
       if (direction > 0) {
         // next slide
@@ -457,57 +457,14 @@ lottieIcon.forEach((icon) => {
   );
 
   // init slider
-
-  // $(".climate-slider").slick({
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   arrows: true,
-  //   swipeToSlide: true,
-  //   vertical: true,
-  //   verticalSwiping: true,
-  //   appendDots: ".climate-slider-control",
-  //   appendArrows: ".climate-slider-control",
-  //   prevArrow:
-  //     '<button type="button" class="slick-prev"><i class="fal fa-angle-up"></i></button>',
-  //   nextArrow:
-  //     '<button type="button" class="slick-next"><i class="fal fa-angle-down"></i></button>',
-
-  //   responsive: [
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         slidesToShow: 4,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 991,
-  //       settings: {
-  //         slidesToShow: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //       },
-  //     },
-  //   ],
-  // });
-
-  const slick_2 = $(".climate-slider");
-  slick_2.slick({
+  const climateSlider = $(".climate-slider");
+  climateSlider.slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
     swipeToSlide: true,
+    infinite: false,
     vertical: true,
     verticalSwiping: true,
     appendDots: ".climate-slider-control",
@@ -545,24 +502,29 @@ lottieIcon.forEach((icon) => {
     ],
   });
 
-  var slick_2_is_animating = false;
+  var climateSlider_is_animating = false;
 
-  slick_2.on("afterChange", function (index) {
-    console.log("Slide after change " + index);
-    slick_2_is_animating = false;
+  climateSlider.on(
+    "afterChange",
+    function (event, slick, currentSlide, nextSlide) {
+      console.log(slick);
+      // console.log(slick);
+      // console.log(currentSlide);
+      // console.log(nextSlide);
+      climateSlider_is_animating = false;
+    }
+  );
+
+  climateSlider.on("beforeChange", function () {
+    climateSlider_is_animating = true;
   });
 
-  slick_2.on("beforeChange", function (index) {
-    console.log("Slide before change " + index);
-    slick_2_is_animating = true;
-  });
-
-  slick_2.on("wheel", function (e) {
+  climateSlider.on("wheel", function (e) {
     e.preventDefault();
     slick_handle_wheel_event_debounced(
       e.originalEvent,
-      slick_2,
-      slick_2_is_animating
+      climateSlider,
+      climateSlider_is_animating
     );
   });
 

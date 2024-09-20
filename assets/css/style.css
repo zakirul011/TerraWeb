@@ -1205,6 +1205,9 @@ video {
   transform: scale(1.1);
   color: #fff;
 }
+.slick-arrow.slick-disabled {
+  opacity: 0.5;
+}
 .climate-slider-control {
   position: absolute;
   left: 103%;
