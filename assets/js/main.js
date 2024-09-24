@@ -1,3 +1,58 @@
+// async function fetchRealTimeData() {
+//   const lon = -95.33;
+//   const lat = 29.78;
+//   const dim = 0.1;
+//   const date = "2022-01-01";
+//   const apiKey = "aSn4OfEAV4FJRG13XD8XetXFmwnIB4IegowI3W8I";
+
+//   const url = `https://api.nasa.gov/planetary/earth/assets?lon=${lon}&lat=${lat}&date=${date}&&dim=${dim}&api_key=${apiKey}`;
+
+//   try {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// }
+
+// fetchRealTimeData();
+
+//// Replace with your Earthdata username, password, and the dataset URL
+// const username = "zakirul011";
+// const password = "#EaZakirul[011]";
+// const datasetUrl =
+//   "https://data.nasa.gov/resource/global-surface-temperature.json";
+
+// async function fetchTemperatureData() {
+//   const headers = new Headers();
+//   headers.set("Authorization", "Basic " + btoa(username + ":" + password));
+
+//   try {
+//     const response = await fetch(datasetUrl, {
+//       method: "GET",
+//       headers: headers,
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok " + response.statusText);
+//     }
+
+//     const data = await response.json();
+//     console.log("Temperature Data:", data);
+
+//     // Implement how this data will impact the systems
+//     // updateSystemsWithTemperature(data);
+//   } catch (error) {
+//     console.error("Error fetching temperature data:", error);
+//   }
+// }
+
+// fetchTemperatureData();
+
 // HERO BUTTON TO FEATURES
 const hero = document.querySelector(".hero-content");
 const features = hero.querySelectorAll(".feature-item");
@@ -11,7 +66,7 @@ const activitiesItem = hero.querySelectorAll(".activities-item");
 const systemTabs = hero.querySelectorAll(".system-tab");
 const activitiesTabs = hero.querySelectorAll(".activities-tab");
 const featureTabs = hero.querySelectorAll(".feature-tab");
-const connectionWrap = hero.querySelectorAll(".connection");
+const connectionWrap = hero.querySelectorAll(".connection-wrap");
 
 expBtn.addEventListener("click", () => {
   hero.classList.add("animation-1");
@@ -105,84 +160,80 @@ activitiesItem.forEach((item, index) => {
 
 // CONNECTION
 connectionWrap.forEach((wrap) => {
-  let pannel = wrap.querySelectorAll(".connection-bar");
-  let content = wrap.querySelectorAll(".connection-content > div");
+  let introBtn = wrap.querySelector(".connection-intro button");
+  let trees = wrap.querySelectorAll(".connection-trees img");
 
-  let leftPannel = pannel[0].querySelectorAll("li");
-  let rightPannel = pannel[1].querySelectorAll("li");
+  let system = {
+    bio: {
+      trees: trees.length,
+      treesParcent: 50,
+    },
+  };
 
-  let l, r, videos, selectedContent;
+  introBtn.addEventListener("click", () => {
+    wrap.classList.add("intro");
+  });
 
-  leftPannel.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      for (let i = 0; i < leftPannel.length; i++) {
-        leftPannel[i].classList.remove("active");
+  let markerWraps = wrap.querySelectorAll(".connection-marker");
+  markerWraps.forEach((markerWrap) => {
+    let ball = markerWrap.querySelector(".connection-ball");
+    let title = markerWrap.querySelector(".connection-title");
+
+    ball.addEventListener("click", () => {
+      markerWrap.classList.toggle("active");
+    });
+    title.addEventListener("click", () => {
+      markerWrap.classList.toggle("active-comp");
+    });
+
+    let controlComponents = markerWrap.querySelectorAll(".connection-comps li");
+    controlComponents.forEach((componentWrap) => {
+      let current = componentWrap.querySelectorAll(".control-current");
+      let input = componentWrap.querySelector("input");
+      let value = input.value;
+      current.forEach((element) => {
+        element.textContent = value;
+      });
+      input.addEventListener("input", (e) => {
+        value = e.target.value;
+        current.forEach((element) => {
+          element.textContent = value;
+        });
+      });
+
+      if (componentWrap.classList.contains("connection-control-trees")) {
+        system.bio.treesParcent = e.target.value;
+        input.addEventListener("input", (e) => {
+          system.bio.treesParcent = e.target.value;
+        });
       }
-      for (let i = 0; i < rightPannel.length; i++) {
-        rightPannel[i].classList.remove("hide");
+
+      // UPDATE FULL SYSTEM
+      updateSystem();
+
+      // FUNCTIONS
+      function updateSystem() {
+        system.bio.trees = parcentToCount(
+          trees.length,
+          system.bio.treesParcent
+        );
+        updateTree(system.bio.trees);
       }
 
-      rightPannel[index].classList.add("hide");
-
-      btn.classList.add("active");
-      l = index + 1;
-
-      if (l && r) {
-        for (let i = 0; i < content.length; i++) {
-          content[i].classList.remove("active");
+      function updateTree(currentTree) {
+        for (let i = 0; i < trees.length; i++) {
+          trees[i].classList.remove("active");
+        }
+        for (let i = 0; i < currentTree; i++) {
+          trees[i].classList.add("active");
         }
       }
 
-      if (wrap.querySelector(`.connection-content-${l}-${r}`)) {
-        selectedContent = wrap.querySelector(`.connection-content-${l}-${r}`);
-        videos = selectedContent.querySelectorAll("video");
-        videos.forEach((video) => {
-          video.currentTime = 0;
-        });
-
-        selectedContent.classList.add("active");
-      } else {
-        console.log(`.connection-content-${l}-${r}`);
+      function parcentToCount(total, parcentValue) {
+        return total * (parcentValue / 100);
       }
     });
   });
-
-  rightPannel.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      for (let i = 0; i < rightPannel.length; i++) {
-        rightPannel[i].classList.remove("active");
-      }
-
-      for (let i = 0; i < leftPannel.length; i++) {
-        leftPannel[i].classList.remove("hide");
-      }
-
-      leftPannel[index].classList.add("hide");
-
-      btn.classList.add("active");
-      r = index + 1;
-
-      if (l && r) {
-        for (let i = 0; i < content.length; i++) {
-          content[i].classList.remove("active");
-        }
-      }
-      if (wrap.querySelector(`.connection-content-${l}-${r}`)) {
-        selectedContent = wrap.querySelector(`.connection-content-${l}-${r}`);
-        videos = selectedContent.querySelectorAll("video");
-        videos.forEach((video) => {
-          video.play();
-        });
-        selectedContent.classList.add("active");
-      } else {
-        console.log(`.connection-content-${l}-${r}`);
-      }
-    });
-  });
-
-  for (let i = 0; i < leftPannel.length; i++) {
-    leftPannel[i].addEventListener("click", () => {});
-  }
 });
 
 // FAQ AREA
@@ -478,19 +529,19 @@ lottieIcon.forEach((icon) => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -540,4 +591,48 @@ lottieIcon.forEach((icon) => {
     fade: true,
   });
   //========== img SLIDER// ==========>
+
+  //========== NASA SLIDER ==========>
+  $(".nasa-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    swipeToSlide: true,
+    infinite: false,
+    appendDots: ".nasa-slider-dots",
+    appendArrows: ".nasa-slider-controller",
+    prevArrow:
+      '<button type="button" class="slick-prev"><i class="fal fa-angle-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><i class="fal fa-angle-right"></i></button>',
+
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  //========== NASA SLIDER// ==========>
 })(jQuery);

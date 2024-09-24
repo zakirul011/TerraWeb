@@ -67,7 +67,7 @@
    <!--======== HEADER AREA ========-->
    <header class="header-area">
       <div class="container">
-         <div class="row">
+         <div class="row align-items-center">
             <div class="col-md-4">
                <h5 class="logo text-white mb-0">
                   <a href="./index.html">
@@ -75,6 +75,13 @@
                      TerraWeb
                   </a>
                </h5>
+            </div>
+            <div class="col-md-8">
+               <ul class="mainmenu text-end">
+                  <li><a href="#home"><i class="fas fa-home me-2"></i> Home</a></li>
+                  <!-- <li><a href="#about">About us</a></li> -->
+                  <li><a href="#team">Team</a></li>
+               </ul>
             </div>
          </div>
       </div>
@@ -85,7 +92,7 @@
    <main>
 
       <!--======== HERO AREA ========-->
-      <section class="hero-area overflow-hidden">
+      <section class="hero-area overflow-hidden" id="home">
          <div class="parallax-imgs position-absolute z-n1 w-100 h-100 section-overlay d-flex">
             <div class="bg-attachment" style="background-image: url(./assets/img/bg/5.jpg);"></div>
             <div class="bg-attachment" style="background-image: url(./assets/img/bg/3.jpg);"></div>
@@ -94,7 +101,7 @@
             <div class="bg-attachment" style="background-image: url(./assets/img/bg/4.jpg);"></div>
          </div>
          <div class="container">
-            <div class="hero-content">
+            <div class="hero-content animation-1 animation-2 animation-connection">
                <!-- WELCOME TEXT -->
                <div class="text-center hero-text pt-5">
                   <h1 class="text-white text-center pt-5 text-uppercase" style="letter-spacing: .1em;">Terra Web</h1>
@@ -102,7 +109,8 @@
                </div>
 
                <!-- GLOBE -->
-               <div class="globe"></div>
+               <div class="globe">
+               </div>
 
                <!-- SYSTEM VIDEO -->
                <div class="system-globe">
@@ -118,7 +126,7 @@
                      <div class="col-md-6">
                         <div class="feature-item">
                            <div class="card bg-attachment section-overlay"
-                              style="background-image: url(./assets/img/small-life.jpg);">
+                              style="background-image: url(./assets/img/system/small-life.jpg);">
                               <button class="card-body">
                                  <h2 class="mb-0">
                                     Earth's System</h2>
@@ -129,7 +137,7 @@
                      <div class="col-md-6">
                         <div class="feature-item">
                            <div class="card bg-attachment section-overlay"
-                              style="background-image: url(./assets/img/forest.jpg);">
+                              style="background-image: url(./assets/img/interconnection/forest.jpg);">
                               <button class="card-body">
                                  <h2 class="mb-0">
                                     Interconnection</h2>
@@ -151,7 +159,7 @@
                      <div class="col-md-6">
                         <div class="feature-item">
                            <div class="card bg-attachment section-overlay"
-                              style="background-image: url(./assets/img/kid-rocket.jpg);">
+                              style="background-image: url(./assets/img/activites/kid-rocket.jpg);">
                               <button class="card-body">
                                  <h2 class="mb-0">
                                     Activities</h2>
@@ -162,7 +170,7 @@
                      <div class="col-md-12">
                         <div class="feature-item">
                            <div class="card bg-attachment section-overlay"
-                              style="background-image: url(./assets/img/space.jpg);">
+                              style="background-image: url(./assets/img/nasa-resource/space.jpg);">
                               <button class="card-body">
                                  <h2 class="mb-0">
                                     NASA's Resources</h2>
@@ -227,27 +235,39 @@
                      <div class="system-tabs">
 
                         <div class="system-tab text-white">
-                           <h4 class="text-uppercase mb-4 text-white">Atmosphere</h4>
                            <div class="row g-4 align-items-center">
                               <div class="col-md-6">
-                                 <div class="img-slider">
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Atmosphere/3.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Atmosphere/1.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Atmosphere/2.jpg" alt="">
-                                    </div>
-                                 </div>
+                                 <video class="rounded-4" muted autoplay loop>
+                                    <source src="./assets/video/atm.mp4" type="">
+                                 </video>
                               </div>
                               <div class="col-md-6">
-                                 <h4 class="text-white fw-normal">The thin layer made up of a mixture of gases and
+                                 <h4 class="text-uppercase mb-4 text-white">Atmosphere</h4>
+                                 <h5 class="text-white fw-normal">The thin layer made up of a mixture of gases and
                                     particles
                                     suspended
                                     in the air that
-                                    surround the Earth (predominantly N2, O2, Ar, CO2 and H2O).</h4>
+                                    surround the Earth (predominantly N2, O2, Ar, CO2 and H2O).</h5>
+                              </div>
+                              <div class="col-md-12">
+
+                                 <p>Imagine a layer cake, wrapping around the Earth. That is essentially what the
+                                    Earth’s atmosphere is like: layers upon layers of gas surrounding the Earth, working
+                                    to protect the planet.
+                                    we cannot directly see the atmosphere, it provides the air we breathe and protects
+                                    us from harmful ultraviolet (UV) rays. The atmosphere also works to trap heat and
+                                    maintain moderate, habitable temperature ranges. Without it, the Earth’s temperature
+                                    would be similar to that of the moon, which experiences extreme temperature
+                                    fluctuations between day and night (-208°F to 250°F) due to the lack of an
+                                    atmosphere.
+                                 </p>
+                                 <p><b>There are five main layers that make up the atmosphere:</b> Troposphere,
+                                    Stratosphere, Mesosphere, Thermosphere, Exosphere</p>
+
+                                 <a class="text-link" target="_blank"
+                                    href="https://www.nasa.gov/general/what-is-earths-atmosphere/">Learn
+                                    more <i class="fas fa-long-arrow-right ms-2"></i></a>
+
                               </div>
                            </div>
                         </div>
@@ -255,23 +275,9 @@
                            <h4 class="text-uppercase mb-4 text-white">Hydrosphere</h4>
                            <div class="row g-4 align-items-center">
                               <div class="col-md-6">
-                                 <div class="img-slider">
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Hydrosphere/1.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Hydrosphere/2.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Hydrosphere/3.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Hydrosphere/4.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Hydrosphere/5.jpg" alt="">
-                                    </div>
-                                 </div>
+                                 <video class="rounded-4" muted autoplay loop>
+                                    <source src="./assets/video/hyd.mp4" type="">
+                                 </video>
                               </div>
                               <div class="col-md-6">
                                  <h4 class="text-white fw-normal">A sphere that includes the liquid ocean, inland water
@@ -285,23 +291,9 @@
                            <h4 class="text-uppercase mb-4 text-white">Cryosphere</h4>
                            <div class="row g-4 align-items-center">
                               <div class="col-md-6">
-                                 <div class="img-slider">
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Cryosphere/1.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Cryosphere/2.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Cryosphere/3.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Cryosphere/4.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Cryosphere/5.jpg" alt="">
-                                    </div>
-                                 </div>
+                                 <video class="rounded-4" muted autoplay loop>
+                                    <source src="./assets/video/atm.mp4" type="">
+                                 </video>
                               </div>
                               <div class="col-md-6">
                                  <h4 class="text-white fw-normal">A subset of the Hydrosphere that consists of frozen
@@ -314,17 +306,9 @@
                            <h4 class="text-uppercase mb-4 text-white">Geosphere</h4>
                            <div class="row g-4 align-items-center">
                               <div class="col-md-6">
-                                 <div class="img-slider">
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/GeoSphere/3.png" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/GeoSphere/1.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/GeoSphere/2.jpg" alt="">
-                                    </div>
-                                 </div>
+                                 <video class="rounded-4" muted autoplay loop>
+                                    <source src="./assets/video/geo.mp4" type="">
+                                 </video>
                               </div>
                               <div class="col-md-6">
                                  <h4 class="text-white fw-normal">A sphere that includes the solid Earth; the core,
@@ -338,20 +322,9 @@
                            <h4 class="text-uppercase mb-4 text-white">Biosphere</h4>
                            <div class="row g-4 align-items-center">
                               <div class="col-md-6">
-                                 <div class="img-slider">
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Biosphere/1.avif" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Biosphere/2.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Biosphere/3.jpg" alt="">
-                                    </div>
-                                    <div class="img-slide">
-                                       <img class="rounded-4" src="./assets/img/system/Biosphere/4.jpg" alt="">
-                                    </div>
-                                 </div>
+                                 <video class="rounded-4" muted autoplay loop>
+                                    <source src="./assets/video/bio.mp4" type="">
+                                 </video>
                               </div>
                               <div class="col-md-6">
                                  <h4 class="text-white fw-normal">A sphere that includes all of Earth’s organisms,
@@ -367,482 +340,413 @@
                   </div>
 
                   <!-- CONNENCTION -->
-                  <div class="feature-tab">
+                  <div class="feature-tab active">
 
-                     <div class="connection">
-                        <ul class="connection-bar">
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Atmosphere/3.jpg" alt="">
-                                 <h6>Atmosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Hydrosphere/5.jpg" alt="">
-                                 <h6>Hydrosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Cryosphere/5.jpg" alt="">
-                                 <h6>Cryosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/GeoSphere/3.png" alt="">
-                                 <h6>Geosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Biosphere/4.jpg" alt="">
-                                 <h6>Biosphere</h6>
-                              </button>
-                           </li>
-                        </ul>
+                     <div class="connection-wrap h-100">
 
-                        <div class="connection-content">
-                           <div class="connection-content-0 text-center active">
-                              <h3 class="text-white">The interconnections between Earth’s systems</h3>
-                              <img class="mb-4" src="./assets/img/interconnection.png" alt="">
-                              <div class="row justify-content-center">
-                                 <div class="col-md-10">
-                                    <p>The Earth's systems—geosphere, biosphere, cryosphere, hydrosphere, and
-                                       atmosphere—are
-                                       deeply interconnected, meaning changes in one system can significantly affect the
-                                       others. Here's how these systems interact with each other:</p>
-                                 </div>
+                        <div class="connection-content text-center">
+                           <div class="clouds">
+                              <img style="animation-duration: 28s;" src="./assets/img/interconnection/part/cloud.png"
+                                 alt="">
+                              <img style="animation-duration: 30s;" class="cloud-lg"
+                                 src="./assets/img/interconnection/part/cloud.png" alt="">
+                              <img style="animation-duration: 20s;" class="cloud-sm"
+                                 src="./assets/img/interconnection/part/cloud.png" alt="">
+                              <img style="animation-duration: 50s;" src="./assets/img/interconnection/part/cloud.png"
+                                 alt="">
+                              <img style="animation-duration: 18s;" class="cloud-lg"
+                                 src="./assets/img/interconnection/part/cloud.png" alt="">
+                              <img cstyle="animation-duration: 35s;" lass="cloud-sm"
+                                 src="./assets/img/interconnection/part/cloud.png" alt="">
+                           </div>
+
+
+                           <img class="w-100" src="./assets/img/interconnection/bg.jpg" alt="">
+
+                           <div class="connection-trees">
+                              <img style="
+                                 width: 10%; 
+                                 left: 79%; 
+                                 bottom: 21%;
+                                 " src="./assets/img/interconnection/part/t1.png" alt="">
+
+                              <img style="
+                                 width: 8%; 
+                                 left: 34%; 
+                                 bottom: 21%;
+                              " src="./assets/img/interconnection/part/t2.png" alt="">
+
+                              <img style="
+                                 width: 12%; 
+                                 left: 73%; 
+                                 bottom: 13%;
+                              " src="./assets/img/interconnection/part/t3.png" alt="">
+
+                              <img style="
+                                 width: 2%; 
+                                 left: 64%; 
+                                 bottom: 18%;
+                              " src="./assets/img/interconnection/part/t4.png" alt="">
+
+                              <img style="
+                                 width: 8%; 
+                                 left: 81%; 
+                                 bottom: 21%;
+                              " src="./assets/img/interconnection/part/t1.png" alt="">
+
+                              <img style="
+                                 width: 7%;
+                                 left: 33%;
+                                 bottom: 14%;
+                                 " src="./assets/img/interconnection/part/t2.png" alt="">
+
+                              <img style="
+                                 width: 7%; 
+                                 left: 33%; 
+                                 bottom: 14%;
+                              " src="./assets/img/interconnection/part/t3.png" alt="">
+
+                              <img style="
+                                 width: 2.5%;
+                                 left: 65%;
+                                 bottom: 17%;
+                              " src="./assets/img/interconnection/part/t4.png" alt="">
+
+                              <img style="
+                                 width: 10%; 
+                                 left: 85%; 
+                                 bottom: 21%;
+                                 " src="./assets/img/interconnection/part/t1.png" alt="">
+
+                              <img style="
+                                 width: 8%; 
+                                 left: 40%; 
+                                 bottom: 21%;
+                              " src="./assets/img/interconnection/part/t2.png" alt="">
+
+                              <img style="
+                                 width: 12%; 
+                                 left: 79%; 
+                                 bottom: 13%;
+                              " src="./assets/img/interconnection/part/t3.png" alt="">
+
+                              <img style="
+                                 width: 2%; 
+                                 left: 69%; 
+                                 bottom: 18%;
+                              " src="./assets/img/interconnection/part/t4.png" alt="">
+
+                              <img style="
+                                 width: 8%; 
+                                 left: 89%; 
+                                 bottom: 21%;
+                              " src="./assets/img/interconnection/part/t1.png" alt="">
+
+                              <img style="
+                                 width: 7%;
+                                 left: 39%;
+                                 bottom: 14%;
+                                 " src="./assets/img/interconnection/part/t2.png" alt="">
+
+                              <img style="
+                                 width: 7%; 
+                                 left: 33%; 
+                                 bottom: 14%;
+                              " src="./assets/img/interconnection/part/t3.png" alt="">
+
+                              <img style="
+                                 width: 2.5%;
+                                 left: 67%;
+                                 bottom: 17%;
+                              " src="./assets/img/interconnection/part/t4.png" alt="">
+
+                              <img style="
+                                 width: 8%;
+                                 left: 58%;
+                                 bottom: 19%;
+                              " src="./assets/img/interconnection/part/t1.png" alt="">
+
+                              <img style="
+                                 width: 5%;
+                                 left: 52%;
+                                 bottom: 22%;
+                                 " src="./assets/img/interconnection/part/t2.png" alt="">
+
+                              <img style="
+                                 width: 5%; 
+                                 left: 33%; 
+                                 bottom: 14%;
+                              " src="./assets/img/interconnection/part/t3.png" alt="">
+
+                              <img style="
+                                 width: 1%;
+                                 left: 71%;
+                                 bottom: 19%;
+                              " src="./assets/img/interconnection/part/t4.png" alt="">
+
+                           </div>
+
+                           <div class="connection-intro">
+                              <h4 class="text-white fw-normal">Our Earth is a beautifully interconnected system <br>
+                                 shaped
+                                 by even
+                                 our smallest actions
+                              </h4>
+                              <h2 class="text-white text-uppercase mt-3">Let's Explore</h2>
+                              <button class="btn glowing-btn glowing-white-btn mt-4"><span>Click
+                                    Here</span></button>
+                           </div>
+
+                           <div class="connection-markers">
+                              <div class="connection-marker connection-marker-atm">
+                                 <ul class="connection-comps">
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-trees"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of trees</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="tree-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-paw"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of animals</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="animal-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <button class="connection-title">
+                                    <h4>Atmosphere</h4>
+                                 </button>
+                                 <div class="connection-line"></div>
+                                 <button class="connection-ball"></button>
                               </div>
-
-                              <h2 class="text-white mt-5">SELECT TWO SYSTEMS</h2>
-                              <h5 class="text-white fw-normal" style="letter-spacing: .3em;">TO EXPLORE THE
-                                 INTERCONNECTIONS
-                              </h5>
-                           </div>
-
-
-                           <div class="connection-content-1-2">
-                              <h4 class="text-white mb-5">Atmosphere and Hydrosphere</h4>
-
-
-                              <div class="row mb-4">
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/atm.mp4" type="">
-                                    </video>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/hyd.mp4" type="">
-                                    </video>
-                                 </div>
+                              <div class="connection-marker connection-marker-hyd">
+                                 <ul class="connection-comps">
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-trees"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of trees</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="tree-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-paw"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of animals</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="animal-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <button class="connection-title">
+                                    <h4>Hydrosphere</h4>
+                                 </button>
+                                 <div class="connection-line"></div>
+                                 <button class="connection-ball"></button>
                               </div>
-
-
-                              <p>Water from the hydrosphere evaporates into the atmosphere, where it forms clouds and
-                                 eventually returns as precipitation. This cycle regulates temperature, weather
-                                 patterns, and climate, affecting all life on Earth.</p>
-
-                              <p><b>Water Cycle:</b> Water evaporates from oceans, forms clouds, and returns as
-                                 precipitation.</p>
-                              <p><b>Energy Transfer:</b> Wind and temperature exchange between air and water influence
-                                 climate.</p>
-                              <p><b> Gas Exchange:</b> Oceans absorb gases like CO₂, affecting climate and air quality.
-                              </p>
-                           </div>
-                           <div class="connection-content-1-3">
-                              <h4 class="text-white mb-5">Atmosphere and Cryosphere</h4>
-                              <p>Ice and snow in the cryosphere reflect sunlight, helping to regulate Earth’s
-                                 temperature. When ice melts, it reduces the reflectivity (albedo) of Earth's surface,
-                                 leading to increased absorption of solar energy and further warming—a feedback loop
-                                 that affects global climate</p>
-
-                              <p>Temperature changes in the atmosphere can cause melting or formation of ice in the
-                                 cryosphere. Atmospheric greenhouse gases can trap heat, leading to glacial melting and
-                                 rising sea levels</p>
-
-                              <h5 class="text-white">Atmosphere and Cryosphere (Ice and Snow)</h5>
-
-                              <p><b>Change in the Atmosphere:</b> Increased greenhouse gas emissions from human
-                                 activities (e.g., burning fossil fuels) lead to global warming.</p>
-                              <p><b>Impact on the Cryosphere:</b> Warming temperatures cause polar ice caps, glaciers,
-                                 and sea ice to melt at an accelerated rate.</p>
-                              <h6 class="text-white"><b>Impact on Other Systems:</b></h6>
-                              <p> <b>Hydrosphere: </b>Melting ice contributes to rising sea levels, which can lead to
-                                 coastal erosion and flooding.</p>
-                              <p> <b>Geosphere:</b> Thawing permafrost (frozen ground) can destabilize land, leading to
-                                 landslides and altered landscapes.</p>
-                              <p> <b>Biosphere:</b> Loss of ice habitat affects species adapted to cold environments,
-                                 such as polar bears and penguins</p>
-
-                           </div>
-                           <div class="connection-content-1-4">
-                              <h4 class="text-white mb-5">Atmosphere and Geosphere</h4>
-                              <p>Volcanic eruptions from the geosphere release gases and ash into the atmosphere, which
-                                 can influence climate by blocking sunlight and altering temperatures. Over time,
-                                 weathering of rocks in the geosphere also absorbs atmospheric carbon dioxide, impacting
-                                 the carbon cycle</p>
-                              <p>Weather patterns in the atmosphere influence erosion and sediment transport in the
-                                 geosphere. Wind and precipitation shape the landscape over time, while atmospheric
-                                 conditions also affect soil formation and nutrient cycles.</p>
-                              <h5 class="text-white">Volcanic Eruptions (Geosphere) and Atmospheric Composition
-                                 (Atmosphere)</h5>
-                              <p><b>Change in the Geosphere:</b> Volcanic eruptions release ash, sulfur dioxide (SO2),
-                                 and other gases into the atmosphere.</p>
-                              <h6 class="text-white">Change in the Geosphere:</h6>
-                              <p><b>Climate:</b> Short-term cooling can disrupt weather patterns and reduce global
-                                 temperatures.</p>
-                              <p><b>Biosphere:</b> Changes in temperature and sunlight can affect plant growth and
-                                 animal behavior.</p>
-                           </div>
-                           <div class="connection-content-1-5">
-                              <h4 class="text-white">Atmosphere and Biosphere</h4>
-                              <p>Plants in the biosphere absorb carbon dioxide from the atmosphere and release oxygen
-                                 through photosynthesis, playing a crucial role in maintaining atmospheric balance.
-                                 Animals, in turn, breathe in oxygen and release carbon dioxide, creating a symbiotic
-                                 relationship.</p>
-                              <h5 class="text-white">Deforestation (Biosphere) and Carbon Cycle (Atmosphere)</h5>
-                              <p><b>Change in the Biosphere:</b> Large-scale deforestation reduces the number of trees
-                                 and plants.</p>
-                              <p><b>Impact on the Atmosphere:</b> Trees absorb carbon dioxide (CO2) during
-                                 photosynthesis. Fewer trees mean less CO2 is removed from the atmosphere, leading to
-                                 increased greenhouse gases.</p>
-                              <h6 class="text-white">Impact on Other Systems:</h6>
-                              <p><b>Hydrosphere:</b> Changes in vegetation can affect the water cycle by altering local
-                                 precipitation patterns and increasing runoff.</p>
-                              <P><b>Geosphere:</b> Erosion rates may increase due to the loss of plant roots that
-                                 stabilize soil.</P>
-                           </div>
-
-                           <div class="connection-content-2-1">
-                              <h4 class="text-white mb-5">Hydrosphere and Atmosphere</h4>
-
-                              <div class="row mb-4">
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/hyd.mp4" type="">
-                                    </video>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/atm.mp4" type="">
-                                    </video>
-                                 </div>
+                              <div class="connection-marker connection-marker-cry">
+                                 <ul class="connection-comps">
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-trees"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of trees</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="tree-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-paw"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of animals</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="animal-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <button class="connection-title">
+                                    <h4>Cryosphere</h4>
+                                 </button>
+                                 <div class="connection-line"></div>
+                                 <button class="connection-ball"></button>
                               </div>
-
-                              <p>Water from the hydrosphere evaporates into the atmosphere, where it forms clouds and
-                                 eventually returns as precipitation. This cycle regulates temperature, weather
-                                 patterns, and climate, affecting all life on Earth.</p>
-
-                              <p><b>Water Cycle:</b> Water evaporates from oceans, forms clouds, and returns as
-                                 precipitation.</p>
-                              <p><b>Energy Transfer:</b> Wind and temperature exchange between air and water influence
-                                 climate.</p>
-                              <p><b> Gas Exchange:</b> Oceans absorb gases like CO₂, affecting climate and air quality.
-                              </p>
-                           </div>
-                           <div class="connection-content-2-3">
-                              <h4 class="text-white mb-5">Hydrosphere and Cryosphere</h4>
-                              <p>The cryosphere, which includes ice caps and glaciers, influences sea levels and the
-                                 availability of freshwater. Melting ice from the cryosphere flows into the hydrosphere,
-                                 impacting ocean currents and ecosystems.</p>
-                              <h5 class="text-white">Melting Glaciers (Cryosphere) and Ocean Circulation (Hydrosphere)
-                              </h5>
-                              <p><b>Change in the Cryosphere:</b> Glaciers and ice sheets are melting, adding large
-                                 amounts of freshwater to the oceans.</p>
-                              <p><b>Impact on the Hydrosphere:</b> Freshwater influx can alter ocean salinity and
-                                 density, impacting ocean circulation patterns.</p>
-                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
-                              <p><b>Climate:</b> Changes in ocean circulation can influence global climate patterns,
-                                 such as
-                                 the Gulf Stream's impact on European climate.</p>
-                              <p><b>Biosphere:</b> Altered ocean currents can affect marine ecosystems and species
-                                 distributions.</p>
-                           </div>
-                           <div class="connection-content-2-4">
-                              <h4 class="text-white mb-5">Hydrosphere and Geosphere </h4>
-                              <p>The geosphere interacts with the hydrosphere through processes like erosion, which
-                                 transports minerals and nutrients into bodies of water, and tectonic activity, which
-                                 can create new waterways or alter existing ones.</p>
-                              <h5 class="text-white">Erosion (Geosphere) and Water Quality (Hydrosphere)</h5>
-                              <p><b>Change in the Geosphere:</b> Erosion from activities like mining, construction, or
-                                 deforestation can lead to the loss of soil and rock.</p>
-                              <p><b>Impact on the Hydrosphere:</b> Eroded material (sediment) can be washed into rivers
-                                 and lakes, impacting water quality.</p>
-                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
-                              <p><b>Biosphere:</b> Increased sedimentation can smother aquatic habitats, affecting fish
-                                 and other organisms.</p>
-                              <p><b>Atmosphere:</b> Dust from erosion can become airborne, affecting air quality and
-                                 potentially influencing climate patterns.</p>
-                           </div>
-                           <div class="connection-content-2-5">
-                              <h4 class="text-white mb-5">Hydrosphere and Biosphere</h4>
-                              <p>The hydrosphere provides water necessary for all living organisms. Aquatic ecosystems,
-                                 such as oceans, rivers, and lakes, support a vast range of biodiversity, and changes in
-                                 water quality or availability can drastically affect life.</p>
-                              <h5 class="text-white">Wetland Drainage (Hydrosphere) and Biodiversity (Biosphere)</h5>
-                              <p><b>Change in the Hydrosphere:</b> Draining wetlands for agriculture or development
-                                 removes standing water and alters wetland ecosystems.</p>
-                              <p><b>Impact on the Biosphere:</b> Wetlands provide critical habitat for a variety of
-                                 species. Their loss can lead to declines in biodiversity.</p>
-                              <h6 class="text-white">Impact on Other Systems:</h6>
-                              <p><b>Geosphere:</b> Wetland drainage can increase soil erosion and sedimentation in
-                                 nearby water bodies.</p>
-                              <p><b>Atmosphere:</b> Wetlands act as carbon sinks; their loss can lead to increased
-                                 atmospheric CO2 levels.</p>
-                           </div>
-
-                           <div class="connection-content-3-1">
-                              <h4 class="text-white mb-5">Cryosphere and Atmosphere</h4>
-                              <p>Ice and snow in the cryosphere reflect sunlight, helping to regulate Earth’s
-                                 temperature. When ice melts, it reduces the reflectivity (albedo) of Earth's surface,
-                                 leading to increased absorption of solar energy and further warming—a feedback loop
-                                 that affects global climate</p>
-
-                              <p>Temperature changes in the atmosphere can cause melting or formation of ice in the
-                                 cryosphere. Atmospheric greenhouse gases can trap heat, leading to glacial melting and
-                                 rising sea levels</p>
-
-                              <h5 class="text-white">Atmosphere and Cryosphere (Ice and Snow)</h5>
-
-                              <p><b>Change in the Atmosphere:</b> Increased greenhouse gas emissions from human
-                                 activities (e.g., burning fossil fuels) lead to global warming.</p>
-                              <p><b>Impact on the Cryosphere:</b> Warming temperatures cause polar ice caps, glaciers,
-                                 and sea ice to melt at an accelerated rate.</p>
-                              <h6 class="text-white"><b>Impact on Other Systems:</b></h6>
-                              <p> <b>Hydrosphere: </b>Melting ice contributes to rising sea levels, which can lead to
-                                 coastal erosion and flooding.</p>
-                              <p> <b>Geosphere:</b> Thawing permafrost (frozen ground) can destabilize land, leading to
-                                 landslides and altered landscapes.</p>
-                              <p> <b>Biosphere:</b> Loss of ice habitat affects species adapted to cold environments,
-                                 such as polar bears and penguins</p>
-                           </div>
-                           <div class="connection-content-3-2">
-
-                              <h4 class="text-white mb-5">Cryosphere and Hydrosphere</h4>
-                              <p>The cryosphere, which includes ice caps and glaciers, influences sea levels and the
-                                 availability of freshwater. Melting ice from the cryosphere flows into the hydrosphere,
-                                 impacting ocean currents and ecosystems.</p>
-                              <h5 class="text-white">Melting Glaciers (Cryosphere) and Ocean Circulation (Hydrosphere)
-                              </h5>
-                              <p><b>Change in the Cryosphere:</b> Glaciers and ice sheets are melting, adding large
-                                 amounts of freshwater to the oceans.</p>
-                              <p><b>Impact on the Hydrosphere:</b> Freshwater influx can alter ocean salinity and
-                                 density, impacting ocean circulation patterns.</p>
-                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
-                              <p><b>Climate:</b> Changes in ocean circulation can influence global climate patterns,
-                                 such as
-                                 the Gulf Stream's impact on European climate.</p>
-                              <p><b>Biosphere:</b> Altered ocean currents can affect marine ecosystems and species
-                                 distributions.</p>
-                           </div>
-                           <div class="connection-content-3-4">
-                              <h4 class="text-white mb-4">Cryosphere and Geosphere </h4>
-                              <p><b>Erosion and Deposition:</b> Glaciers shape landforms through erosion and sediment
-                                 movement</p>
-                              <p><b>Permafrost Thaw:</b> Thawing releases greenhouse gases and affects ground stability.
-                              </p>
-                              <p><b>Isostatic Rebound:</b> Melting ice causes the Earth's crust to rise over time.</p>
-                              <p><b>Bad Impact:</b> Rapid glacial melt can lead to unstable land and increased
-                                 landslides. Releases methane, a potent greenhouse gas, exacerbating climate change. Can
-                                 lead to earthquakes and impact infrastructure stability.</p>
-                           </div>
-                           <div class="connection-content-3-5">
-                              <h4 class="text-white mb-4">Cryosphere and Biosphere </h4>
-
-                              <p><b>Habitat Provision:</b> Ice and snow provide habitats for polar species.</p>
-                              <p><b>Climate Regulation:</b> Ice reflects sunlight, affecting global temperatures.</p>
-                              <p><b>Nutrient Flow:</b> Melting ice releases fresh water and nutrients into ecosystems.
-                              </p>
-                              <p><b>Bad Impact:</b> Melting ice reduces habitats, threatening species like polar bears
-                                 and penguins.Ice melt reduces reflection, accelerating global warming.Rapid melting
-                                 disrupts freshwater ecosystems and nutrient balances.</p>
-                           </div>
-
-                           <div class="connection-content-4-1">
-                              <h4 class="text-white mb-5">Geosphere and Atmosphere</h4>
-                              <p>Volcanic eruptions from the geosphere release gases and ash into the atmosphere, which
-                                 can influence climate by blocking sunlight and altering temperatures. Over time,
-                                 weathering of rocks in the geosphere also absorbs atmospheric carbon dioxide, impacting
-                                 the carbon cycle</p>
-                              <p>Weather patterns in the atmosphere influence erosion and sediment transport in the
-                                 geosphere. Wind and precipitation shape the landscape over time, while atmospheric
-                                 conditions also affect soil formation and nutrient cycles.</p>
-                              <h5 class="text-white">Volcanic Eruptions (Geosphere) and Atmospheric Composition
-                                 (Atmosphere)</h5>
-                              <p><b>Change in the Geosphere:</b> Volcanic eruptions release ash, sulfur dioxide (SO2),
-                                 and other gases into the atmosphere.</p>
-                              <h6 class="text-white">Change in the Geosphere:</h6>
-                              <p><b>Climate:</b> Short-term cooling can disrupt weather patterns and reduce global
-                                 temperatures.</p>
-                              <p><b>Biosphere:</b> Changes in temperature and sunlight can affect plant growth and
-                                 animal behavior.</p>
-                           </div>
-                           <div class="connection-content-4-2">
-                              <h4 class="text-white mb-5">Geosphere and Hydrosphere</h4>
-                              <p>The geosphere interacts with the hydrosphere through processes like erosion, which
-                                 transports minerals and nutrients into bodies of water, and tectonic activity, which
-                                 can create new waterways or alter existing ones.</p>
-                              <h5 class="text-white">Erosion (Geosphere) and Water Quality (Hydrosphere)</h5>
-                              <p><b>Change in the Geosphere:</b> Erosion from activities like mining, construction, or
-                                 deforestation can lead to the loss of soil and rock.</p>
-                              <p><b>Impact on the Hydrosphere:</b> Eroded material (sediment) can be washed into rivers
-                                 and lakes, impacting water quality.</p>
-                              <h6 class="text-white">Impact on the Hydrosphere:</h6>
-                              <p><b>Biosphere:</b> Increased sedimentation can smother aquatic habitats, affecting fish
-                                 and other organisms.</p>
-                              <p><b>Atmosphere:</b> Dust from erosion can become airborne, affecting air quality and
-                                 potentially influencing climate patterns.</p>
-                           </div>
-                           <div class="connection-content-4-3">
-                              <h4 class="text-white mb-4">Geosphere and Cryosphere</h4>
-                              <p><b>Erosion and Deposition:</b> Glaciers shape landforms through erosion and sediment
-                                 movement</p>
-                              <p><b>Permafrost Thaw:</b> Thawing releases greenhouse gases and affects ground stability.
-                              </p>
-                              <p><b>Isostatic Rebound:</b> Melting ice causes the Earth's crust to rise over time.</p>
-                              <p><b>Bad Impact:</b> Rapid glacial melt can lead to unstable land and increased
-                                 landslides. Releases methane, a potent greenhouse gas, exacerbating climate change. Can
-                                 lead to earthquakes and impact infrastructure stability.</p>
-                           </div>
-                           <div class="connection-content-4-5">
-                              <h4 class="text-white mb-4">Geosphere and Biosphere</h4>
-
-                              <div class="row mb-4">
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/geo.mp4" type="">
-                                    </video>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/bio.mp4" type="">
-                                    </video>
-                                 </div>
+                              <div class="connection-marker connection-marker-geo">
+                                 <ul class="connection-comps">
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-trees"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of trees</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="tree-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-paw"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of animals</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="animal-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <button class="connection-title">
+                                    <h4>GeoSphere</h4>
+                                 </button>
+                                 <div class="connection-line"></div>
+                                 <button class="connection-ball"></button>
                               </div>
-
-
-                              <p>The geosphere provides the foundation for the biosphere by offering land for plants to
-                                 grow and habitats for animals. Soil formation in the geosphere affects plant life,
-                                 which in turn influences the types of organisms that can thrive in a given area</p>
-
-                              <p><b>Nutrient Cycling:</b> Rock weathering provides essential minerals for plants.</p>
-                              <p><b>Habitat Formation:</b> Landforms create diverse habitats for organisms.</p>
-                              <p><b>Soil Formation:</b> Organic matter mixes with rock particles to form soil.</p>
-                              <p>Bad Impact: Soil erosion and pollution can deplete essential nutrients. Deforestation
-                                 and mining disrupt habitats and biodiversity. Overuse of land and pollution can degrade
-                                 soil quality, affecting food</p>
-                           </div>
-
-                           <div class="connection-content-5-1">
-                              <h4 class="text-white">Biosphere and Atmosphere</h4>
-                              <p>Plants in the biosphere absorb carbon dioxide from the atmosphere and release oxygen
-                                 through photosynthesis, playing a crucial role in maintaining atmospheric balance.
-                                 Animals, in turn, breathe in oxygen and release carbon dioxide, creating a symbiotic
-                                 relationship.</p>
-                              <h5 class="text-white">Deforestation (Biosphere) and Carbon Cycle (Atmosphere)</h5>
-                              <p><b>Change in the Biosphere:</b> Large-scale deforestation reduces the number of trees
-                                 and plants.</p>
-                              <p><b>Impact on the Atmosphere:</b> Trees absorb carbon dioxide (CO2) during
-                                 photosynthesis. Fewer trees mean less CO2 is removed from the atmosphere, leading to
-                                 increased greenhouse gases.</p>
-                              <h6 class="text-white">Impact on Other Systems:</h6>
-                              <p><b>Hydrosphere:</b> Changes in vegetation can affect the water cycle by altering local
-                                 precipitation patterns and increasing runoff.</p>
-                              <P><b>Geosphere:</b> Erosion rates may increase due to the loss of plant roots that
-                                 stabilize soil.</P>
-                           </div>
-                           <div class="connection-content-5-2">
-                              <h4 class="text-white mb-5">Biosphere and Hydrosphere</h4>
-                              <p>The hydrosphere provides water necessary for all living organisms. Aquatic ecosystems,
-                                 such as oceans, rivers, and lakes, support a vast range of biodiversity, and changes in
-                                 water quality or availability can drastically affect life.</p>
-                              <h5 class="text-white">Wetland Drainage (Hydrosphere) and Biodiversity (Biosphere)</h5>
-                              <p><b>Change in the Hydrosphere:</b> Draining wetlands for agriculture or development
-                                 removes standing water and alters wetland ecosystems.</p>
-                              <p><b>Impact on the Biosphere:</b> Wetlands provide critical habitat for a variety of
-                                 species. Their loss can lead to declines in biodiversity.</p>
-                              <h6 class="text-white">Impact on Other Systems:</h6>
-                              <p><b>Geosphere:</b> Wetland drainage can increase soil erosion and sedimentation in
-                                 nearby water bodies.</p>
-                              <p><b>Atmosphere:</b> Wetlands act as carbon sinks; their loss can lead to increased
-                                 atmospheric CO2 levels.</p>
-                           </div>
-                           <div class="connection-content-5-3">
-                              <h4 class="text-white mb-4">Biosphere and Cryosphere </h4>
-
-                              <p><b>Habitat Provision:</b> Ice and snow provide habitats for polar species.</p>
-                              <p><b>Climate Regulation:</b> Ice reflects sunlight, affecting global temperatures.</p>
-                              <p><b>Nutrient Flow:</b> Melting ice releases fresh water and nutrients into ecosystems.
-                              </p>
-                              <p><b>Bad Impact:</b> Melting ice reduces habitats, threatening species like polar bears
-                                 and penguins.Ice melt reduces reflection, accelerating global warming.Rapid melting
-                                 disrupts freshwater ecosystems and nutrient balances.</p>
-                           </div>
-                           <div class="connection-content-5-4">
-                              <h4 class="text-white mb-4">Biosphere and Geosphere</h4>
-
-                              <div class="row mb-4">
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/bio.mp4" type="">
-                                    </video>
-                                 </div>
-                                 <div class="col-md-6">
-                                    <video autoplay muted loop>
-                                       <source src="./assets/video/geo.mp4" type="">
-                                    </video>
-                                 </div>
+                              <div class="connection-marker connection-marker-bio">
+                                 <ul class="connection-comps">
+                                    <li class="connection-control-trees">
+                                       <button>
+                                          <i class="fas fa-trees"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control ">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of trees</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="tree-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <button>
+                                          <i class="fas fa-paw"></i>
+                                          <span class="control-current-holder d-block">
+                                             <span class="control-current">0</span>%
+                                          </span>
+                                       </button>
+                                       <div class="connection-control-wrap">
+                                          <div class="connection-control">
+                                             <h5 class="text-white"><span class="control-current">0</span>% Percentage
+                                                of animals</h5>
+                                             <div class="d-flex align-items-center text-white fw-bold gap-2">
+                                                <span>0%</span>
+                                                <input type="range" class="animal-control" min="0" max="100" value="50"
+                                                   step="10">
+                                                <span>100%</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <button class="connection-title">
+                                    <h4>Biosphere</h4>
+                                 </button>
+                                 <div class="connection-line"></div>
+                                 <button class="connection-ball"></button>
                               </div>
-
-                              <p>The geosphere provides the foundation for the biosphere by offering land for plants to
-                                 grow and habitats for animals. Soil formation in the geosphere affects plant life,
-                                 which in turn influences the types of organisms that can thrive in a given area</p>
-
-                              <p><b>Nutrient Cycling:</b> Rock weathering provides essential minerals for plants.</p>
-                              <p><b>Habitat Formation:</b> Landforms create diverse habitats for organisms.</p>
-                              <p><b>Soil Formation:</b> Organic matter mixes with rock particles to form soil.</p>
-                              <p>Bad Impact: Soil erosion and pollution can deplete essential nutrients. Deforestation
-                                 and mining disrupt habitats and biodiversity. Overuse of land and pollution can degrade
-                                 soil quality, affecting food</p>
                            </div>
 
                         </div>
 
-                        <ul class="connection-bar">
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Atmosphere/3.jpg" alt="">
-                                 <h6>Atmosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Hydrosphere/5.jpg" alt="">
-                                 <h6>Hydrosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Cryosphere/5.jpg" alt="">
-                                 <h6>Cryosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/GeoSphere/3.png" alt="">
-                                 <h6>Geosphere</h6>
-                              </button>
-                           </li>
-                           <li>
-                              <button>
-                                 <img src="./assets/img/system/Biosphere/4.jpg" alt="">
-                                 <h6>Biosphere</h6>
-                              </button>
-                           </li>
-                        </ul>
                      </div>
 
                   </div>
@@ -1171,7 +1075,7 @@
                            <div class="col-md-12">
 
                               <div class="activities-item card bg-attachment section-overlay"
-                                 style="background-image: url(./assets/img/bg/game3.jpg);">
+                                 style="background-image: url(./assets/img/activites/game.jpg);">
                                  <button class="card-body">
                                     <h2 class="mb-0">
                                        Minigames</h2>
@@ -1182,7 +1086,7 @@
                            <div class="col-md-12">
 
                               <div class="activities-item card bg-attachment section-overlay"
-                                 style="background-image: url(./assets/img/bg/quiz.jpg)">
+                                 style="background-image: url(./assets/img/activites/faq.jpg)">
                                  <button class="card-body">
                                     <h2 class="mb-0">
                                        FAQ</h2>
@@ -1193,7 +1097,7 @@
                            <div class="col-md-12">
 
                               <div class="activities-item card bg-attachment section-overlay"
-                                 style="background-image: url(./assets/img/bg/challenges.jpg);">
+                                 style="background-image: url(./assets/img/activites/challenges.jpg);">
                                  <button class="card-body">
                                     <h2 class="mb-0">
                                        Real world challenges</h2>
@@ -1294,28 +1198,31 @@
 
                   <!-- NASA RESOURCES -->
                   <div class="feature-tab">
-                     <div class="nasa">
+                     <div class="nasa w-100">
 
-                        <div class="row g-4 justify-content-center">
+                        <div class="nasa-slider w-100">
 
-                           <div class="col-md-3">
+                           <div class="nasa-slide">
                               <div class="card card-box text-center">
                                  <div class="card-img-top overflow-hidden">
-                                    <img src="./assets/img/satellites.jpg" alt="">
+                                    <img src="./assets/img/nasa-resource/satellites.jpg" alt="">
                                  </div>
                                  <div class="card-body text-white p-4">
                                     <h4 class="text-white"><a target="_blank"
                                           href="https://science.nasa.gov/earth/data/climate-data/">Satellite
                                           Data</a></h4>
                                     <p>NASA satellites observe Earth’s land, air, water & ice</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://science.nasa.gov/earth/data/climate-data/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
                                  </div>
                               </div>
                            </div>
 
-                           <div class="col-md-3">
+                           <div class="nasa-slide">
                               <div class="card card-box text-center">
                                  <div class="card-img-top overflow-hidden">
-                                    <img src="./assets/img/nasa-img-gallery.jpg" alt="">
+                                    <img src="./assets/img/nasa-resource/nasa-img-gallery.jpg" alt="">
                                  </div>
                                  <div class="card-body text-white p-4">
                                     <h4 class="text-white"><a target="_blank" href="https://images.nasa.gov/">Images &
@@ -1323,14 +1230,17 @@
                                           Gallery</a>
                                     </h4>
                                     <p>Discover NASA'S intergalactic multimedia collections.</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://images.nasa.gov/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
                                  </div>
                               </div>
                            </div>
 
-                           <div class="col-md-3">
+                           <div class="nasa-slide">
                               <div class="card card-box text-center">
                                  <div class="card-img-top overflow-hidden">
-                                    <img src="./assets/img/mission.jpg" alt="">
+                                    <img src="./assets/img/nasa-resource/mission.jpg" alt="">
                                  </div>
                                  <div class="card-body text-white p-4">
                                     <h4 class="text-white"><a target="_blank"
@@ -1338,23 +1248,124 @@
                                           & Operations</a>
                                     </h4>
                                     <p>Eyes on Aquarius The joint U.S./Argentinian Aquarius/Satélite de...</p>
+
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://www.nasa.gov/missions/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/nasa-resource/mission.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a target="_blank"
+                                          href="https://www.nasa.gov/missions/">Missions
+                                          & Operations</a>
+                                    </h4>
+                                    <p>Eyes on Aquarius The joint U.S./Argentinian Aquarius/Satélite de...</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://www.nasa.gov/missions/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/nasa-resource/satellites.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a target="_blank"
+                                          href="https://science.nasa.gov/earth/data/climate-data/">Satellite
+                                          Data</a></h4>
+                                    <p>NASA satellites observe Earth’s land, air, water & ice</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://science.nasa.gov/earth/data/climate-data/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/nasa-resource/nasa-img-gallery.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a target="_blank" href="https://images.nasa.gov/">Images &
+                                          Video
+                                          Gallery</a>
+                                    </h4>
+                                    <p>Discover NASA'S intergalactic multimedia collections.</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://images.nasa.gov/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/nasa-resource/mission.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a target="_blank"
+                                          href="https://www.nasa.gov/missions/">Missions
+                                          & Operations</a>
+                                    </h4>
+                                    <p>Eyes on Aquarius The joint U.S./Argentinian Aquarius/Satélite de...</p>
+
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://www.nasa.gov/missions/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="nasa-slide">
+                              <div class="card card-box text-center">
+                                 <div class="card-img-top overflow-hidden">
+                                    <img src="./assets/img/nasa-resource/mission.jpg" alt="">
+                                 </div>
+                                 <div class="card-body text-white p-4">
+                                    <h4 class="text-white"><a target="_blank"
+                                          href="https://www.nasa.gov/missions/">Missions
+                                          & Operations</a>
+                                    </h4>
+                                    <p>Eyes on Aquarius The joint U.S./Argentinian Aquarius/Satélite de...</p>
+                                    <a class="text-link justify-content-center" target="_blank"
+                                       href="https://www.nasa.gov/missions/">Learn
+                                       more <i class="fas fa-long-arrow-right ms-2"></i></a>
                                  </div>
                               </div>
                            </div>
 
                         </div>
 
+                        <div class="nasa-slider-controller d-flex align-items-center justify-content-center">
+                           <div class="nasa-slider-dots mx-2">
+
+                           </div>
+                        </div>
                      </div>
                   </div>
 
                </div>
+
+
             </div>
          </div>
       </section>
       <!--======== HERO AREA// ========-->
 
       <!--======== TEAM AREA ========-->
-      <section class="team-area section-padding">
+      <section class="team-area section-padding" id="team">
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-md-10">
@@ -1445,10 +1456,6 @@
          </div>
       </section>
       <!--======== TEAM AREA// ========-->
-
-
-
-
 
    </main>
    <!--======== MAIN BODY// ========-->

@@ -25,6 +25,7 @@ earthGroup.rotation.z = (-23.4 * Math.PI) / 180;
 scene.add(earthGroup);
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
+controls.enableRotate = true; // Disable mouse drag rotation
 const detail = 12;
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, detail);
@@ -70,14 +71,16 @@ const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
 sunLight.position.set(-2, 0.5, 1.5);
 scene.add(sunLight);
 
+// Function to handle rotation
 function animate() {
   requestAnimationFrame(animate);
-
+  // Regular rotation
   earthMesh.rotation.y += 0.0022;
   lightsMesh.rotation.y += 0.0022;
   cloudsMesh.rotation.y += 0.0028;
   glowMesh.rotation.y += 0.0022;
   stars.rotation.y -= 0.00022;
+
   renderer.render(scene, camera);
 }
 
