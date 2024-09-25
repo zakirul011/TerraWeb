@@ -1144,8 +1144,8 @@ div:nth-child(4) > .system-list-item {
   --posX: 4em;
 }
 .connection-marker-cry {
-  top: 55%;
-  left: 43%;
+  top: 51%;
+  left: 45%;
   --posX: 6em;
 }
 .connection-marker-geo {
@@ -1192,8 +1192,7 @@ div:nth-child(4) > .system-list-item {
   border: var(--border);
   border-radius: var(--round) 0;
   padding: 1em;
-  width: 20em;
-  padding-bottom: 0;
+  min-width: 20em;
   position: relative;
 }
 .connection-comps {
@@ -1280,8 +1279,9 @@ div:nth-child(4) > .system-list-item {
 
 .connection-trees img {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: var(--l, 0);
+  bottom: var(--b, 0);
+  width: var(--w, 20%);
   transition: 0.3s ease;
   opacity: 0;
   pointer-events: none;
@@ -1289,6 +1289,33 @@ div:nth-child(4) > .system-list-item {
 .connection-trees img.active {
   opacity: 1;
   pointer-events: all;
+}
+.form-range::-moz-range-thumb {
+  background-color: var(--bs-primary);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease;
+}
+.form-range::-webkit-slider-thumb {
+  background-color: var(--bs-primary);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease;
+}
+.form-range::-moz-range-thumb:active {
+  transform: scale(1.2);
+  background-color: var(--bs-primary);
+}
+.form-range::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  background-color: var(--bs-primary);
+}
+.form-range::-moz-range-progress {
+  background-color: var(--bs-primary);
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+.form-range::-webkit-slider-progress {
+  background-color: var(--bs-primary);
+  height: 0.5rem;
 }
 
 /* ANIMATION CONNECTION */
@@ -1315,12 +1342,6 @@ div:nth-child(4) > .system-list-item {
 }
 .card-box.card:hover {
   transform: translate(0, -0.5em);
-}
-.climate-content {
-  padding: 3em 2em;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  border-radius: 1em;
 }
 /* ANIMATION CLIMATE */
 .feature-tab:nth-child(3) {
@@ -1493,9 +1514,13 @@ div:nth-child(4) > .system-list-item {
   border: 0;
   position: relative;
   padding-right: 45px;
-  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.5));
+  background: linear-gradient(
+    90deg,
+    var(--bs-primary),
+    rgba(255, 255, 255, 0.5)
+  );
   border-radius: 10px 10px;
-  color: #000;
+  color: #fff;
   backdrop-filter: blur(10px);
 }
 .faq-box.active .faq-box-title button {

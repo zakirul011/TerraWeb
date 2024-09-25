@@ -202,9 +202,10 @@ connectionWrap.forEach((wrap) => {
       });
 
       if (componentWrap.classList.contains("connection-control-trees")) {
-        system.bio.treesParcent = e.target.value;
+        system.bio.treesParcent = value;
         input.addEventListener("input", (e) => {
           system.bio.treesParcent = e.target.value;
+          updateSystem();
         });
       }
 
@@ -218,6 +219,8 @@ connectionWrap.forEach((wrap) => {
           system.bio.treesParcent
         );
         updateTree(system.bio.trees);
+
+        console.log(system);
       }
 
       function updateTree(currentTree) {
